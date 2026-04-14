@@ -1,8 +1,9 @@
 """End-to-end pipeline orchestrator.
 
-Connects all phases: synthetic data → Tier 1 rules → pattern mining →
-Tier 2 classifier → expert queue. Computes coverage stats and returns
-a unified result object.
+Connects all 7 phases: synthetic data → Tier 1 rules → pattern mining →
+Tier 2 classifier → expert queue → handoff generation → LLM evals.
+
+Mock mode (default): no API calls, $0. Pass use_llm=True for real Claude calls.
 """
 from __future__ import annotations
 
@@ -129,10 +130,20 @@ def run_pipeline(
     n_babies: int = 100,
     nights_per_baby: int = 3,
     seed: int = 42,
+    use_llm: bool = False,
+    llm_sample_size: int = 15,
+    model: str | None = None,
 ) -> PipelineResults:
-    """Run the full Phases 1-4 pipeline end-to-end."""
+    """Run the full pipeline end-to-end.
+
+    Args:
+        use_llm: If True, uses Claude API for handoffs + evals (costs money).
+                 If False (default), uses mock mode ($0).
+        llm_sample_size: When use_llm=True, only run LLM on this many traces.
+        model: Override model (e.g., "claude-haiku-4-5-20251001" for dev).
+    """
     print("=" * 60)
-    print("SpO2 AI Eval Pipeline — Phases 1-4")
+    print(f"SpO2 AI Eval Pipeline — {'LIVE MODE' if use_llm else 'MOCK MODE'}")
     print("=" * 60)
 
     # Phase 1: Generate synthetic data
@@ -187,6 +198,66 @@ def run_pipeline(
     for source, count in sorted(by_source.items()):
         source_correct = sum(1 for t in final_triage if t.source == source and t.final_label == t.ground_truth)
         print(f"  {source:20s}: {source_correct}/{count} = {source_correct/count*100:.1f}%")
+
+    # Build final label map for Phases 5-6
+    final_label_map = {t.trace_id: t.final_label for t in final_triage}
+    final_source_map = {t.trace_id: t.source for t in final_triage}
+
+    # Phase 6: Handoff generation (before Phase 5 — evals need the handoff text)
+    print(f"\n[Phase 6] Generating handoffs ({'live' if use_llm else 'mock'})...")
+    from src.handoff.generator import generate_handoff
+    handoffs = {}
+    trace_subset = traces[:llm_sample_size] if use_llm else traces
+    for trace in trace_subset:
+        label = final_label_map.get(trace.night_id, trace.ground_truth_label)
+        source = final_source_map.get(trace.night_id, "pipeline")
+        handoffs[trace.night_id] = generate_handoff(
+            trace, label, classified_by=source,
+            use_llm=use_llm, model=model,
+        )
+    print(f"  Generated {len(handoffs)} handoffs")
+
+    # Phase 5: LLM evals
+    print(f"\n[Phase 5] Running evaluators ({'live' if use_llm else 'mock'})...")
+    from src.evals.clinical_accuracy import evaluate_clinical_accuracy
+    from src.evals.handoff_quality import evaluate_handoff_quality
+    from src.evals.artifact_handling import evaluate_artifact_handling
+
+    import numpy as np
+    eval_rng = np.random.default_rng(seed)
+    eval_results = []
+    for trace in trace_subset:
+        label = final_label_map.get(trace.night_id, trace.ground_truth_label)
+        s = int(eval_rng.integers(0, 2**31))
+
+        eval_results.append(evaluate_clinical_accuracy(
+            trace, label, use_llm=use_llm, model=model, seed=s))
+
+        handoff = handoffs.get(trace.night_id)
+        if handoff:
+            eval_results.append(evaluate_handoff_quality(
+                trace, handoff, label, use_llm=use_llm, model=model, seed=s+1))
+
+        eval_results.append(evaluate_artifact_handling(
+            trace, label, use_llm=use_llm, model=model, seed=s+2))
+
+    # Eval summary
+    from collections import Counter as Ctr
+    eval_by_type = {}
+    for r in eval_results:
+        if r.evaluator not in eval_by_type:
+            eval_by_type[r.evaluator] = {"Pass": 0, "Fail": 0}
+        eval_by_type[r.evaluator][r.answer] += 1
+
+    print(f"\n  Eval results ({len(eval_results)} total):")
+    for name, counts in eval_by_type.items():
+        total = counts["Pass"] + counts["Fail"]
+        pct = counts["Pass"] / total * 100 if total else 0
+        print(f"    {name:25s}: {counts['Pass']}/{total} Pass ({pct:.1f}%)")
+
+    if use_llm:
+        from src.llm_utils import get_tracker
+        print(f"\n  {get_tracker().summary()}")
 
     return PipelineResults(
         traces=traces,
