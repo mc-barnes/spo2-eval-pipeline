@@ -32,6 +32,7 @@ class HandoffSummary:
 # ---------------------------------------------------------------------------
 
 _URGENCY_MAP = {
+    "emergency": "EMERGENCY",
     "urgent": "URGENT",
     "borderline": "MONITOR",
     "normal": "ROUTINE",
@@ -44,9 +45,19 @@ _URGENCY_MAP = {
 # ---------------------------------------------------------------------------
 
 _MOCK_TEMPLATES = {
+    "emergency": (
+        "EMERGENCY — Baby had a severe desaturation event reaching {min_spo2:.0f}% "
+        "overnight, lasting {max_dur}s. SatSeconds burden: {sat_seconds:.0f}.\n\n"
+        "As a {ga_weeks}-week {ga_desc} infant (now {days} days old), "
+        "{ga_context} This level of desaturation poses immediate risk.\n\n"
+        "Action: Advise family to call 911 or go to nearest emergency department "
+        "immediately. If family cannot be reached within 15 minutes, escalate to "
+        "on-call physician for emergency welfare check."
+    ),
     "urgent": (
-        "URGENT — Baby had {n_urgent} desaturation event(s) below 90% overnight, "
-        "with the longest lasting {max_dur}s and reaching {min_spo2:.0f}%.\n\n"
+        "URGENT — Baby had {n_urgent} desaturation event(s) below threshold overnight, "
+        "with the longest lasting {max_dur}s and reaching {min_spo2:.0f}%. "
+        "SatSeconds burden: {sat_seconds:.0f}.\n\n"
         "As a {ga_weeks}-week {ga_desc} infant (now {days} days old), "
         "{ga_context} This baby's overnight pattern requires prompt attention.\n\n"
         "Action: Call the family within 1 hour to confirm home oxygen equipment "
@@ -54,10 +65,10 @@ _MOCK_TEMPLATES = {
         "pediatrician follow-up today."
     ),
     "borderline": (
-        "MONITOR — Baby's overnight SpO2 showed {n_borderline} borderline event(s) "
-        "in the 90-94% range. Mean SpO2 was {mean_spo2:.1f}%, minimum {min_spo2:.0f}%.\n\n"
+        "MONITOR — Baby had {n_borderline} borderline SpO2 event(s) in the 90-94% "
+        "range overnight. Mean SpO2 was {mean_spo2:.1f}%, minimum {min_spo2:.0f}%.\n\n"
         "As a {ga_weeks}-week {ga_desc} infant (now {days} days old), "
-        "{ga_context} The overnight pattern is not clearly urgent but warrants monitoring.\n\n"
+        "{ga_context} These readings are not clearly urgent but need closer follow-up.\n\n"
         "Action: Schedule follow-up pulse oximetry within 48 hours. If this is the "
         "third consecutive borderline night, escalate to physician review."
     ),
@@ -67,7 +78,9 @@ _MOCK_TEMPLATES = {
         "desaturation events detected.\n\n"
         "As a {ga_weeks}-week {ga_desc} infant (now {days} days old), "
         "{ga_context}\n\n"
-        "Action: Continue standard monitoring schedule. No immediate follow-up needed."
+        "Action: No contact with family needed. Document normal overnight result "
+        "in the patient record and close this monitoring cycle. Next routine "
+        "review in 7 days unless clinical status changes."
     ),
     "artifact": (
         "ROUTINE (with note) — Overnight monitoring detected {n_artifacts} motion "
@@ -75,8 +88,8 @@ _MOCK_TEMPLATES = {
         "removal, SpO2 was within normal range (mean {mean_spo2:.1f}%).\n\n"
         "As a {ga_weeks}-week {ga_desc} infant (now {days} days old), "
         "{ga_context} The artifacts suggest the sensor may need repositioning.\n\n"
-        "Action: Advise family on sensor placement during next check-in. "
-        "No urgent clinical follow-up needed."
+        "Action: Advise family on sensor placement during next scheduled check-in "
+        "within 7 days. No urgent clinical follow-up needed."
     ),
 }
 
@@ -104,6 +117,11 @@ def _compute_trace_stats(trace: NightTrace) -> dict:
 
     ga_desc = "preterm" if baby.gestational_age_weeks < 37 else "term"
 
+    # SatSeconds: hypoxemic burden (GA-adjusted)
+    from src.config import GA_URGENT_THRESHOLDS
+    ga_threshold = GA_URGENT_THRESHOLDS.get(baby.ga_category, 90)
+    sat_seconds = float(np.sum(np.maximum(0, ga_threshold - spo2)))
+
     return {
         "mean_spo2": float(np.mean(spo2)),
         "min_spo2": float(np.min(spo2)),
@@ -115,6 +133,7 @@ def _compute_trace_stats(trace: NightTrace) -> dict:
         "ga_desc": ga_desc,
         "ga_context": _GA_CONTEXT.get(baby.ga_category, ""),
         "days": baby.days_since_birth,
+        "sat_seconds": sat_seconds,
     }
 
 

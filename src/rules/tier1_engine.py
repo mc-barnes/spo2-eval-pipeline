@@ -1,13 +1,15 @@
 """Rule-based Tier 1 pre-annotation engine.
 
-Applies hardcoded clinical thresholds to auto-label the "easy" cases.
+Applies clinical thresholds to auto-label the "easy" cases.
 Target: ~65% of traces auto-labeled with zero model involvement.
 
 Rules applied in priority order:
   R4 — Artifact:   implausible SpO2 rate-of-change + accelerometer spike
-  R1 — Urgent:     SpO2 <90% sustained >10 consecutive seconds
-  R2 — Borderline: SpO2 90-94% sustained >60 consecutive seconds
-  R3 — Normal:     >95% of readings above 95%, no R1/R2 triggers
+       (with safety check: genuine urgent desats override artifact label)
+  R1 — Urgent/Emergency: SpO2 below GA-adjusted threshold sustained >10s
+       Emergency: SpO2 <80% sustained (call 911)
+  R2 — Borderline: SpO2 in GA-adjusted borderline range, sustained
+  R3 — Normal:     >98% of readings above 95%, no R1/R2 triggers
 """
 from __future__ import annotations
 
@@ -18,6 +20,7 @@ import numpy as np
 from src.config import (
     SPO2_URGENT_THRESHOLD,
     SPO2_URGENT_DURATION_S,
+    SPO2_EMERGENCY_THRESHOLD,
     SPO2_BORDERLINE_LOW,
     SPO2_BORDERLINE_HIGH,
     SPO2_BORDERLINE_DURATION_S,
@@ -26,6 +29,8 @@ from src.config import (
     ACCEL_ARTIFACT_THRESHOLD_G,
     SPO2_ARTIFACT_RATE,
     SPO2_ARTIFACT_WINDOW_S,
+    GA_URGENT_THRESHOLDS,
+    GA_BORDERLINE_RANGES,
 )
 from src.data_gen.synthetic import NightTrace
 
@@ -36,7 +41,7 @@ class RuleResult:
     trace_id: str
     baby_id: str
     ground_truth: str
-    label: str | None              # "normal", "urgent", "borderline", "artifact", or None
+    label: str | None              # "normal", "urgent", "emergency", "borderline", "artifact", or None
     confidence: float              # 0.0–1.0
     rule_triggered: str | None     # "R1", "R2", "R3", "R4", or None
     events_detected: list[dict] = field(default_factory=list)
@@ -121,14 +126,17 @@ def _check_artifact(trace: NightTrace) -> tuple[list[dict], np.ndarray]:
     return events, artifact_mask
 
 
-def _check_urgent(spo2: np.ndarray, exclude_mask: np.ndarray) -> list[dict]:
-    """R1: SpO2 <90% sustained >10 consecutive seconds (excluding artifacts)."""
+def _check_urgent(spo2: np.ndarray, exclude_mask: np.ndarray,
+                   ga_category: str = "term") -> list[dict]:
+    """R1: SpO2 below GA-adjusted threshold sustained >10s (excluding artifacts)."""
+    threshold = GA_URGENT_THRESHOLDS.get(ga_category, SPO2_URGENT_THRESHOLD)
+
     # Mask out artifact segments
     effective_spo2 = spo2.copy()
     effective_spo2[exclude_mask] = 100  # treat artifact as non-event
 
-    below_90 = effective_spo2 < SPO2_URGENT_THRESHOLD
-    runs = _find_sustained_runs(below_90, SPO2_URGENT_DURATION_S)
+    below_threshold = effective_spo2 < threshold
+    runs = _find_sustained_runs(below_threshold, SPO2_URGENT_DURATION_S)
 
     events = []
     for start, end in runs:
@@ -139,31 +147,34 @@ def _check_urgent(spo2: np.ndarray, exclude_mask: np.ndarray) -> list[dict]:
             "end_s": int(end),
             "duration_s": int(end - start),
             "min_spo2": round(float(np.min(spo2[start:end])), 1),
+            "threshold_used": threshold,
         })
     return events
 
 
-def _check_borderline(spo2: np.ndarray, exclude_mask: np.ndarray) -> list[dict]:
-    """R2: SpO2 drops into 90-94% range AND represents a dip from baseline.
+def _check_borderline(spo2: np.ndarray, exclude_mask: np.ndarray,
+                      ga_category: str = "term") -> list[dict]:
+    """R2: SpO2 drops into GA-adjusted borderline range, sustained.
 
     Key distinction: a preterm baby whose STABLE baseline is 92% should NOT
-    trigger this rule. Only fires when SpO2 is in 90-94% AND is at least 2%
-    below the trace's overall median (i.e., it's a DIP, not the baseline).
-    Requires sustained >120s.
+    trigger this rule. Only fires when SpO2 is in the borderline range AND
+    represents a dip from baseline (at least 2% below trace median).
     """
+    bl_low, bl_high = GA_BORDERLINE_RANGES.get(
+        ga_category, (SPO2_BORDERLINE_LOW, SPO2_BORDERLINE_HIGH))
+
     effective_spo2 = spo2.copy()
     effective_spo2[exclude_mask] = 100
 
-    # Only apply this rule if the trace's baseline is meaningfully above the
-    # borderline range. If the median is already near 90-94%, the trace needs
-    # ML-based assessment (Tier 2) that accounts for gestational age context.
+    # Only apply if trace baseline is meaningfully above the borderline range.
+    # If median is already near the borderline range, defer to Tier 2.
     trace_median = float(np.median(effective_spo2))
-    if trace_median <= 95.5:
-        return []  # defer to Tier 2 for preterm/moderate preterm baselines
+    if trace_median <= bl_high + 1.5:
+        return []  # defer to Tier 2 — baseline is near/in borderline range
 
     in_range = (
-        (effective_spo2 >= SPO2_BORDERLINE_LOW)
-        & (effective_spo2 <= SPO2_BORDERLINE_HIGH)
+        (effective_spo2 >= bl_low)
+        & (effective_spo2 <= bl_high)
     )
     # 30s sustained — median gate above prevents preterm false positives
     runs = _find_sustained_runs(in_range, 30)
@@ -195,9 +206,58 @@ def _check_normal(spo2: np.ndarray, exclude_mask: np.ndarray) -> bool:
     return pct_above >= 0.97
 
 
+def _urgent_safety_check(spo2: np.ndarray, ga_category: str = "term") -> list[dict]:
+    """Safety check: find urgent desats in RAW signal (no artifact masking).
+
+    This is the false-negative prevention gate. If a genuine sustained desat
+    exists in the raw signal, it cannot be masked by artifact detection.
+    Uses GA-adjusted thresholds.
+    """
+    threshold = GA_URGENT_THRESHOLDS.get(ga_category, SPO2_URGENT_THRESHOLD)
+    below = spo2 < threshold
+    runs = _find_sustained_runs(below, SPO2_URGENT_DURATION_S)
+
+    events = []
+    for start, end in runs:
+        events.append({
+            "rule": "R1_SAFETY",
+            "type": "urgent_desat_raw",
+            "start_s": int(start),
+            "end_s": int(end),
+            "duration_s": int(end - start),
+            "min_spo2": round(float(np.min(spo2[start:end])), 1),
+            "threshold_used": threshold,
+        })
+    return events
+
+
+def _classify_urgency(events: list[dict]) -> tuple[str, float]:
+    """Determine urgent vs emergency label and confidence from desat events."""
+    min_spo2 = min(e["min_spo2"] for e in events)
+    max_dur = max(e["duration_s"] for e in events)
+
+    # Emergency: SpO2 below 80% — call 911
+    if min_spo2 < SPO2_EMERGENCY_THRESHOLD:
+        return "emergency", 0.99
+
+    # Urgent with severity-based confidence
+    if min_spo2 < 85 and max_dur > 30:
+        return "urgent", 0.99
+    elif min_spo2 < 88:
+        return "urgent", 0.90
+    else:
+        return "urgent", 0.80
+
+
 def apply_rules(trace: NightTrace) -> RuleResult:
-    """Apply all Tier 1 rules to a single trace in priority order."""
+    """Apply all Tier 1 rules to a single trace in priority order.
+
+    Safety invariant: if the raw SpO2 signal contains a sustained desat
+    below the GA-adjusted threshold, the trace CANNOT be labeled anything
+    other than 'urgent' or 'emergency', regardless of artifact status.
+    """
     spo2 = trace.spo2
+    ga_cat = trace.baby.ga_category
     all_events = []
 
     # R4 — Artifact (check first)
@@ -205,8 +265,6 @@ def apply_rules(trace: NightTrace) -> RuleResult:
     all_events.extend(artifact_events)
 
     # Label as artifact if significant artifact activity is detected.
-    # Criteria: multiple artifact events detected, OR artifact events explain
-    # a meaningful fraction of the SpO2 drops in the trace.
     n_artifact_samples = int(np.sum(artifact_mask))
     below_baseline = spo2 < (np.median(spo2) - 3)
     n_desat_in_artifact = int(np.sum(below_baseline & artifact_mask))
@@ -214,6 +272,23 @@ def apply_rules(trace: NightTrace) -> RuleResult:
     artifact_ratio = n_desat_in_artifact / n_desat_total
 
     if len(artifact_events) > 0 and (artifact_ratio > 0.25 or len(artifact_events) >= 2):
+        # SAFETY CHECK: before labeling as artifact, verify no genuine urgent
+        # desats exist in the raw signal that artifact masking might hide.
+        raw_urgent = _urgent_safety_check(spo2, ga_cat)
+        if raw_urgent:
+            # Override: genuine urgent desat found — cannot label as artifact
+            all_events.extend(raw_urgent)
+            label, confidence = _classify_urgency(raw_urgent)
+            return RuleResult(
+                trace_id=trace.night_id,
+                baby_id=trace.baby.baby_id,
+                ground_truth=trace.ground_truth_label,
+                label=label,
+                confidence=round(confidence, 2),
+                rule_triggered="R1_SAFETY",
+                events_detected=all_events,
+            )
+        # No genuine urgent desat — safe to label as artifact
         confidence = min(0.95, 0.70 + 0.05 * len(artifact_events))
         return RuleResult(
             trace_id=trace.night_id,
@@ -225,31 +300,23 @@ def apply_rules(trace: NightTrace) -> RuleResult:
             events_detected=all_events,
         )
 
-    # R1 — Urgent
-    urgent_events = _check_urgent(spo2, artifact_mask)
+    # R1 — Urgent / Emergency (GA-adjusted)
+    urgent_events = _check_urgent(spo2, artifact_mask, ga_cat)
     all_events.extend(urgent_events)
     if urgent_events:
-        # Confidence based on severity
-        min_spo2 = min(e["min_spo2"] for e in urgent_events)
-        max_dur = max(e["duration_s"] for e in urgent_events)
-        if min_spo2 < 85 and max_dur > 30:
-            confidence = 0.99
-        elif min_spo2 < 88:
-            confidence = 0.90
-        else:
-            confidence = 0.80
+        label, confidence = _classify_urgency(urgent_events)
         return RuleResult(
             trace_id=trace.night_id,
             baby_id=trace.baby.baby_id,
             ground_truth=trace.ground_truth_label,
-            label="urgent",
+            label=label,
             confidence=round(confidence, 2),
             rule_triggered="R1",
             events_detected=all_events,
         )
 
-    # R2 — Borderline
-    borderline_events = _check_borderline(spo2, artifact_mask)
+    # R2 — Borderline (GA-adjusted)
+    borderline_events = _check_borderline(spo2, artifact_mask, ga_cat)
     all_events.extend(borderline_events)
     if borderline_events:
         n_events = len(borderline_events)
@@ -317,6 +384,7 @@ def run_tier1(traces: list[NightTrace]) -> tuple[list[RuleResult], list[NightTra
     print(f"Total traces: {n}")
     print(f"Auto-labeled: {len(labeled)} ({len(labeled)/n*100:.1f}%)")
     print(f"  → normal:     {label_counts.get('normal', 0)}")
+    print(f"  → emergency:  {label_counts.get('emergency', 0)}")
     print(f"  → urgent:     {label_counts.get('urgent', 0)}")
     print(f"  → borderline: {label_counts.get('borderline', 0)}")
     print(f"  → artifact:   {label_counts.get('artifact', 0)}")

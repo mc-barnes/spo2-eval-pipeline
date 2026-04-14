@@ -63,7 +63,7 @@ def evaluate_handoff_quality(
         handoff_text=handoff.summary_text,
     )
 
-    result = call_llm(prompt, model=model, max_tokens=300)
+    result = call_llm(prompt, model=model, max_tokens=500)
     if result is None:
         return mock_eval(
             trace.night_id, "handoff_quality",

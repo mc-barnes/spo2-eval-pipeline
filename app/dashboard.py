@@ -218,7 +218,7 @@ if page == "Pipeline Overview":
             if r.routed_to == "auto":
                 tier_data.append({"Tier": "Tier 2 (ML)", "Correct": r.predicted_label == r.ground_truth})
         for r in expert_results:
-            tier_data.append({"Tier": "Expert Review", "Correct": r.expert_label == r.ground_truth})
+            tier_data.append({"Tier": "Expert Review*", "Correct": r.expert_label == r.ground_truth})
 
         tier_df = pd.DataFrame(tier_data)
         acc_rows = []
@@ -226,7 +226,7 @@ if page == "Pipeline Overview":
             acc = tier_df.groupby("Tier")["Correct"].mean().reset_index()
             acc.columns = ["Tier", "Accuracy"]
             acc["Accuracy"] = (acc["Accuracy"] * 100).round(1)
-            color_map = {"Tier 1 (Rules)": TEAL_PRIMARY, "Tier 2 (ML)": SAGE, "Expert Review": AMBER}
+            color_map = {"Tier 1 (Rules)": TEAL_PRIMARY, "Tier 2 (ML)": SAGE, "Expert Review*": AMBER}
             for _, row in acc.iterrows():
                 acc_rows.append((row["Tier"], row["Accuracy"], color_map.get(row["Tier"], TEAL_PRIMARY)))
 
@@ -236,9 +236,40 @@ if page == "Pipeline Overview":
             subtitle="Classification correctness at each triage level",
         ), unsafe_allow_html=True)
 
+        # Tier 2 domain shift warning
+        t2_acc_val = None
+        for tier_name, acc_val, _ in acc_rows:
+            if "Tier 2" in tier_name:
+                t2_acc_val = acc_val
+        if t2_acc_val is not None:
+            st.markdown(
+                f'<div style="background:#FFF8E7; border-left:3px solid {AMBER}; '
+                f'border-radius:0 {RADIUS_TABLE} {RADIUS_TABLE} 0; padding:12px 18px; '
+                f'margin-top:8px; margin-bottom:8px; font-family:{FONT_BODY}; '
+                f'color:{BODY_TEXT}; font-size:0.82rem; line-height:1.5;">'
+                f'<strong style="color:{AMBER};">Note — Tier 2 accuracy ({t2_acc_val:.1f}%)</strong><br>'
+                f'This reflects performance on the <em>ambiguous cases</em> that Tier 1 rules '
+                f'could not classify — the hardest traces in the dataset. '
+                f'The classifier was trained on Tier 1\'s auto-labeled data (clear cases), '
+                f'so domain shift on these edge cases is expected. '
+                f'In production, active learning on expert-labeled data would improve this.'
+                f'</div>',
+                unsafe_allow_html=True,
+            )
+
+        # Expert accuracy footnote
+        st.markdown(
+            f'<div style="font-family:{FONT_BODY}; color:{MUTED_TEXT}; font-size:0.78rem; '
+            f'margin-top:-4px; margin-bottom:16px; padding-left:4px;">'
+            f'*Expert Review accuracy is simulated (95% oracle). Real accuracy depends on '
+            f'reviewer fatigue, inter-rater variability, and staffing.'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
+
     with right_col:
         gt_counts = Counter(t.ground_truth_label for t in traces)
-        label_order = ["normal", "borderline", "urgent", "artifact"]
+        label_order = ["normal", "borderline", "urgent", "emergency", "artifact"]
         ordered_labels = [l for l in label_order if l in gt_counts]
 
         fig_pie = go.Figure(go.Pie(
@@ -289,6 +320,65 @@ if page == "Pipeline Overview":
     ], total, title="Triage Distribution",
        subtitle=f"{total} traces routed across three tiers"),
     unsafe_allow_html=True)
+
+    # Per-label sensitivity / PPV / F1
+    from sklearn.metrics import precision_recall_fscore_support
+    all_preds = []
+    for r in tier1_results:
+        if r.auto_labeled:
+            all_preds.append({"true": r.ground_truth, "pred": r.label})
+    for r in tier2_results:
+        if r.routed_to == "auto":
+            all_preds.append({"true": r.ground_truth, "pred": r.predicted_label})
+    for r in expert_results:
+        all_preds.append({"true": r.ground_truth, "pred": r.expert_label})
+
+    if all_preds:
+        pred_df = pd.DataFrame(all_preds)
+        all_labels = ["normal", "borderline", "urgent", "emergency", "artifact"]
+        labels_present = [l for l in all_labels
+                          if l in pred_df["true"].unique() or l in pred_df["pred"].unique()]
+
+        precision, recall, f1, support = precision_recall_fscore_support(
+            pred_df["true"], pred_df["pred"], labels=labels_present, zero_division=0
+        )
+
+        metrics_rows_html = ""
+        for i, label in enumerate(labels_present):
+            label_color = LABEL_COLORS.get(label, TEAL_PRIMARY)
+            sens_color = URGENT_RED if label in ("urgent", "emergency") and recall[i] < 0.95 else BODY_TEXT
+            metrics_rows_html += (
+                f'<tr style="border-bottom:1px solid {BORDER_LIGHT};">'
+                f'<td style="padding:8px 12px; font-weight:500; color:{label_color};">'
+                f'{label.capitalize()}</td>'
+                f'<td style="padding:8px 12px; text-align:center; color:{sens_color}; '
+                f'font-weight:{"600" if label in ("urgent","emergency") else "400"};">'
+                f'{recall[i]*100:.1f}%</td>'
+                f'<td style="padding:8px 12px; text-align:center;">{precision[i]*100:.1f}%</td>'
+                f'<td style="padding:8px 12px; text-align:center;">{f1[i]*100:.1f}%</td>'
+                f'<td style="padding:8px 12px; text-align:center; color:{MUTED_TEXT};">'
+                f'{support[i]}</td>'
+                f'</tr>'
+            )
+
+        metrics_table = (
+            f'<table style="width:100%; border-collapse:collapse; font-family:{FONT_BODY}; '
+            f'font-size:0.88rem; color:{BODY_TEXT};">'
+            f'<thead><tr style="border-bottom:2px solid {TEAL_PRIMARY};">'
+            f'<th style="padding:8px 12px; text-align:left;">Label</th>'
+            f'<th style="padding:8px 12px; text-align:center;">Sensitivity</th>'
+            f'<th style="padding:8px 12px; text-align:center;">PPV</th>'
+            f'<th style="padding:8px 12px; text-align:center;">F1</th>'
+            f'<th style="padding:8px 12px; text-align:center;">N</th>'
+            f'</tr></thead><tbody>{metrics_rows_html}</tbody></table>'
+        )
+
+        st.markdown(section_card(
+            "Per-Label Clinical Metrics",
+            metrics_table,
+            subtitle="Sensitivity = recall (cases caught). PPV = precision (predictions correct). "
+                     "Urgent/emergency sensitivity must approach 100%.",
+        ), unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------------------------
@@ -694,7 +784,7 @@ elif page == "Run Single Trace":
 
 elif page == "Design System":
     st.header("Design System")
-    st.caption("Owlet-inspired tokens — colors, typography, and component patterns")
+    st.caption("Design tokens — colors, typography, and component patterns")
 
     # --- Color Palette ---
     st.subheader("Color Palette")

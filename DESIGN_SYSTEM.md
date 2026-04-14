@@ -1,6 +1,6 @@
 # Design System — SpO2 Eval Pipeline
 
-Owlet-inspired tokens for the Streamlit dashboard. All values are defined in `app/theme.py`.
+Design tokens for the Streamlit dashboard. All values are defined in `app/theme.py`.
 
 ## Colors
 
@@ -45,7 +45,7 @@ Owlet-inspired tokens for the Streamlit dashboard. All values are defined in `ap
 | Label | DM Sans | 400 | 0.78rem (uppercase) |
 | Caption | DM Sans | 400 | 0.8rem |
 
-Italic Playfair Display is used for emphasis in headings (matching owletcare.com style).
+Italic Playfair Display is used for emphasis in headings.
 
 ## Spacing
 

@@ -13,6 +13,7 @@ from src.config import (
     SPO2_BORDERLINE_HIGH,
     NIGHT_DURATION_S,
     ACCEL_ARTIFACT_THRESHOLD_G,
+    GA_URGENT_THRESHOLDS,
 )
 from src.data_gen.synthetic import NightTrace
 from src.rules.tier1_engine import RuleResult
@@ -112,6 +113,11 @@ def extract_features(trace: NightTrace, consecutive_borderline_nights: int = 0) 
         np.diff((accel_mag > ACCEL_ARTIFACT_THRESHOLD_G).astype(int)) == 1
     ))
 
+    # SatSeconds: integral of (threshold - SpO2) for sub-threshold samples.
+    # Higher = more severe hypoxemic burden. GA-adjusted threshold.
+    ga_threshold = GA_URGENT_THRESHOLDS.get(baby.ga_category, SPO2_URGENT_THRESHOLD)
+    sat_seconds = float(np.sum(np.maximum(0, ga_threshold - spo2)))
+
     # Correlation between SpO2 drops and accel spikes
     if n > 100:
         # Downsample to 1-minute windows for correlation
@@ -156,6 +162,8 @@ def extract_features(trace: NightTrace, consecutive_borderline_nights: int = 0) 
         "accel_mean_magnitude": round(accel_mean_magnitude, 4),
         "accel_spike_count": accel_spike_count,
         "desat_accel_correlation": round(desat_accel_corr, 3),
+        # Severity
+        "sat_seconds": round(sat_seconds, 1),
         # Trace metadata
         "night_id": trace.night_id,
         "ground_truth": trace.ground_truth_label,

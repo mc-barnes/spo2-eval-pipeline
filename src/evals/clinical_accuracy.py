@@ -30,8 +30,8 @@ OVERNIGHT SpO2 SUMMARY:
 SYSTEM'S TRIAGE: {assigned_label}
 
 EVALUATION CRITERIA:
-- Pass: The triage label matches the clinical severity. Urgent night = urgent label. Normal night = normal label. Borderline is for genuinely ambiguous cases.
-- Fail: The triage label is incorrect. Examples: labeling an urgent night as normal, labeling artifact as urgent, labeling sustained <90% as borderline.
+- Pass: The triage label matches the clinical severity. Emergency (SpO2 <80% sustained) = emergency label. Urgent night = urgent label. Normal night = normal label. Borderline is for genuinely ambiguous cases.
+- Fail: The triage label is incorrect. Examples: labeling an urgent night as normal, labeling artifact as urgent, labeling sustained <80% as merely urgent (should be emergency).
 
 FEW-SHOT EXAMPLES:
 
@@ -42,6 +42,10 @@ Patient: 29 weeks GA, mean SpO2 91%, min SpO2 78%, 4 events <90% for >10s. Syste
 Example 2 (Fail):
 Patient: 38 weeks GA, mean SpO2 98%, min SpO2 96%, 0 events. System triage: borderline.
 {{"reasoning": "A term infant with consistently normal SpO2 and no desaturation events should be normal, not borderline. Over-triage error.", "answer": "Fail"}}
+
+Example 3 (Pass):
+Patient: 26 weeks GA, mean SpO2 88%, min SpO2 72%, 2 events <80% for >15s. System triage: emergency.
+{{"reasoning": "An extremely preterm infant with sustained SpO2 below 80% reaching 72% warrants emergency classification requiring immediate 911 response. Triage is correct.", "answer": "Pass"}}
 
 Respond ONLY with valid JSON: {{"reasoning": "<your reasoning>", "answer": "Pass" or "Fail"}}"""
 

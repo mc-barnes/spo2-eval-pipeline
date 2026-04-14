@@ -142,6 +142,12 @@ def run_pipeline(
         llm_sample_size: When use_llm=True, only run LLM on this many traces.
         model: Override model (e.g., "claude-haiku-4-5-20251001" for dev).
     """
+    # Reset cost tracker with limits sized for this run
+    if use_llm:
+        from src.llm_utils import reset_tracker
+        max_calls = llm_sample_size * 4 + 10  # handoffs + 3 evals per trace + buffer
+        reset_tracker(max_calls=max_calls, max_spend_usd=1.00)
+
     print("=" * 60)
     print(f"SpO2 AI Eval Pipeline — {'LIVE MODE' if use_llm else 'MOCK MODE'}")
     print("=" * 60)
@@ -162,10 +168,10 @@ def run_pipeline(
 
     # Phase 4: Tier 2 classifier + expert queue
     print("[Phase 4] Training Tier 2 classifier...")
-    model, le, metrics = train_tier2(tier1_results, traces)
+    clf, le, metrics = train_tier2(tier1_results, traces)
 
     print(f"\n[Phase 4] Predicting on {len(unlabeled_traces)} unlabeled traces...")
-    tier2_results = predict_tier2(model, le, unlabeled_traces)
+    tier2_results = predict_tier2(clf, le, unlabeled_traces)
 
     # Route low-confidence traces to expert queue
     expert_traces = [
@@ -198,6 +204,10 @@ def run_pipeline(
     for source, count in sorted(by_source.items()):
         source_correct = sum(1 for t in final_triage if t.source == source and t.final_label == t.ground_truth)
         print(f"  {source:20s}: {source_correct}/{count} = {source_correct/count*100:.1f}%")
+
+    emergency_count = sum(1 for t in final_triage if t.final_label == "emergency")
+    if emergency_count:
+        print(f"\n  EMERGENCY cases: {emergency_count} (require immediate 911 action)")
 
     # Build final label map for Phases 5-6
     final_label_map = {t.trace_id: t.final_label for t in final_triage}

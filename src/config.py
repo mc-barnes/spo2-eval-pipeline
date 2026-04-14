@@ -47,9 +47,12 @@ BIRTH_WEIGHT_RANGES = {
     "term": (2500, 4500),
 }
 
-# -- Clinical Thresholds --
-SPO2_URGENT_THRESHOLD = 90        # % — below this is urgent
+# -- Clinical Thresholds (fixed, used as fallback when GA unknown) --
+# NOTE: The rule engine uses GA-adjusted thresholds below when GA is available.
+# These fixed values are kept as fallbacks and documentation of the baseline.
+SPO2_URGENT_THRESHOLD = 90        # % — below this is urgent (term default)
 SPO2_URGENT_DURATION_S = 10       # seconds — must sustain this long
+SPO2_EMERGENCY_THRESHOLD = 80     # % — below this is emergency (call 911)
 SPO2_BORDERLINE_LOW = 90
 SPO2_BORDERLINE_HIGH = 94
 SPO2_BORDERLINE_DURATION_S = 60   # seconds sustained for borderline
@@ -58,6 +61,22 @@ SPO2_NORMAL_PCT = 0.95            # fraction of night that must be above thresho
 ACCEL_ARTIFACT_THRESHOLD_G = 2.5  # g — accelerometer spike threshold
 SPO2_ARTIFACT_RATE = 15.0         # %/3s — implausible rate of SpO2 change
 SPO2_ARTIFACT_WINDOW_S = 3        # seconds for rate-of-change check
+
+# -- GA-Adjusted Thresholds (from published neonatal reference ranges) --
+# Sources: Castillo et al. 2008, Hay et al. 2002, BOOST II / COT trials
+GA_URGENT_THRESHOLDS = {
+    "extremely_preterm": 85,   # baseline ~91%, urgent well below baseline
+    "very_preterm": 88,        # baseline ~93%
+    "moderate_preterm": 89,    # baseline ~95%
+    "term": 90,                # baseline ~98%, standard threshold
+}
+
+GA_BORDERLINE_RANGES = {
+    "extremely_preterm": (85, 90),  # between urgent and expected baseline
+    "very_preterm": (88, 92),
+    "moderate_preterm": (89, 93),
+    "term": (90, 94),
+}
 
 # -- Signal Parameters --
 SAMPLING_RATE_HZ = 1

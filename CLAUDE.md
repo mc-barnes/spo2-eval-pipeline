@@ -2,15 +2,15 @@
 
 ## Current State
 All 7 phases built (mock mode). No real API calls yet ($4.98 balance — confirm before spending).
-Dashboard has Owlet-inspired theming on Pipeline Overview; other pages still default.
-Next: finish dashboard styling → run small live eval (~$0.15) → GitHub push with README.
+Dashboard has custom theming across all pages. V2 clinical fixes applied.
+Next: live eval on v2 → GitHub push with README.
 
 ## Key Files
 - `STATUS.md` — phase tracker, known issues, next actions, interview talk track
 - `LEARNINGS.md` — engineering notes for handoff (preterm baseline problem, Tier 2 accuracy gap, etc.)
 - `src/pipeline/orchestrator.py` — end-to-end pipeline entry point
 - `app/dashboard.py` — Streamlit dashboard (6 views)
-- `.streamlit/config.toml` — Owlet theme colors
+- `.streamlit/config.toml` — Dashboard theme colors
 
 ## Tech Stack
 Python 3.12, numpy, pandas, scikit-learn 1.8, mlxtend, streamlit, plotly, anthropic SDK

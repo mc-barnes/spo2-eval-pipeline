@@ -46,6 +46,7 @@ CLASSIFIER_FEATURES = [
     "hour_2_3_desat_count", "hour_2_3_vs_rest_ratio",
     "consecutive_borderline_nights",
     "accel_mean_magnitude", "accel_spike_count", "desat_accel_correlation",
+    "sat_seconds",
 ]
 
 
@@ -68,8 +69,10 @@ def train_tier2(
     # Build feature matrix
     df = build_feature_matrix(labeled_traces)
 
-    # Add rule labels
-    rule_label_map = {r.trace_id: r.label for r in labeled_results}
+    # Add rule labels — merge emergency into urgent for training
+    # (Tier 2 only handles ambiguous cases; emergency/urgent are clear cases)
+    rule_label_map = {r.trace_id: ("urgent" if r.label == "emergency" else r.label)
+                      for r in labeled_results}
     df["rule_label"] = df["night_id"].map(rule_label_map)
     df = df.dropna(subset=["rule_label"])
 

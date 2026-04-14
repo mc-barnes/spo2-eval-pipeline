@@ -1,11 +1,11 @@
-"""SpO2 Eval Pipeline — Owlet-inspired design tokens.
+"""SpO2 Eval Pipeline — Design tokens.
 
 Single source of truth for colors, typography, spacing, and shared Plotly layout.
-Matched from owletcare.com marketing site (light/warm palette for internal dashboards).
+Light/warm palette for clinical dashboard readability.
 """
 
 # ---------------------------------------------------------------------------
-# Colors — Owlet brand palette
+# Colors — Clinical dashboard palette
 # ---------------------------------------------------------------------------
 
 # Primary / Brand teal family
@@ -42,7 +42,7 @@ GOOGLE_FONTS_URL = "https://fonts.googleapis.com/css2?family=Playfair+Display:it
 # Spacing & Radii
 # ---------------------------------------------------------------------------
 
-RADIUS_BUTTON = "24px"      # Pill-shaped buttons (matches Owlet marketing site)
+RADIUS_BUTTON = "24px"      # Pill-shaped buttons
 RADIUS_CARD = "14px"        # Metric cards, content panels
 RADIUS_TABLE = "12px"       # Tables, small cards
 RADIUS_BADGE = "20px"       # Urgency badges, pills
@@ -63,6 +63,7 @@ LABEL_COLORS = {
     "normal": TEAL_LIGHT,
     "borderline": AMBER,
     "urgent": URGENT_RED,
+    "emergency": "#8B2020",
     "artifact": NEUTRAL_GRAY,
 }
 
@@ -71,6 +72,7 @@ EVAL_COLORS = [TEAL_PRIMARY, SAGE, AMBER]
 
 # Urgency badge colors
 URGENCY_COLORS = {
+    "EMERGENCY": "#8B2020",
     "URGENT": URGENT_RED,
     "MONITOR": AMBER,
     "ROUTINE": TEAL_PRIMARY,
@@ -168,7 +170,7 @@ p, span, div, label, li {{
     border: 1px solid {BORDER};
 }}
 
-/* --- Buttons: Owlet pill shape --- */
+/* --- Buttons: pill shape --- */
 .stButton > button[kind="primary"] {{
     background-color: {TEAL_PRIMARY} !important;
     border-color: {TEAL_PRIMARY} !important;
@@ -202,7 +204,7 @@ p, span, div, label, li {{
     color: {TEAL_DARK} !important;
 }}
 
-/* --- Slider: Owlet teal --- */
+/* --- Slider: teal accent --- */
 .stSlider [data-baseweb="slider"] div[role="slider"] {{
     background-color: {TEAL_PRIMARY} !important;
     border-color: {TEAL_PRIMARY} !important;

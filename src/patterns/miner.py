@@ -50,6 +50,7 @@ FEATURE_COLS = [
     "hour_2_3_desat_count", "hour_2_3_vs_rest_ratio",
     "consecutive_borderline_nights",
     "accel_mean_magnitude", "accel_spike_count", "desat_accel_correlation",
+    "sat_seconds",
 ]
 
 
