@@ -37,12 +37,21 @@ def plot_trace(
     else:
         fig = go.Figure()
 
+    # Owlet palette (matched from owletcare.com)
+    TEAL_DARK = "#2C5F5B"
+    TEAL_PRIMARY = "#5BA69E"
+    TEAL_LIGHT = "#6BACA4"
+    URGENT_RED = "#C1565B"
+    AMBER = "#D4A054"
+    WARM_WHITE = "#FEFCFA"
+    BORDER = "#E2DDD8"
+
     # Main SpO2 line
     fig.add_trace(go.Scatter(
         x=hours, y=spo2,
         mode="lines",
         name="SpO2",
-        line=dict(color="#2563eb", width=1),
+        line=dict(color=TEAL_PRIMARY, width=1.2),
     ))
 
     # Shade urgent regions (SpO2 < 90%)
@@ -51,8 +60,8 @@ def plot_trace(
         fig.add_trace(go.Scatter(
             x=hours, y=np.where(urgent_mask, spo2, np.nan),
             mode="lines", name="< 90% (urgent)",
-            line=dict(color="#dc2626", width=2),
-            fill="tozeroy", fillcolor="rgba(220, 38, 38, 0.1)",
+            line=dict(color=URGENT_RED, width=2),
+            fill="tozeroy", fillcolor="rgba(193, 86, 91, 0.08)",
         ))
 
     # Shade borderline regions (90-94%)
@@ -61,15 +70,15 @@ def plot_trace(
         fig.add_trace(go.Scatter(
             x=hours, y=np.where(borderline_mask, spo2, np.nan),
             mode="lines", name="90-94% (borderline)",
-            line=dict(color="#f59e0b", width=1.5),
+            line=dict(color=AMBER, width=1.5),
         ))
 
     # Threshold lines
-    fig.add_hline(y=90, line_dash="dash", line_color="#dc2626",
+    fig.add_hline(y=90, line_dash="dash", line_color=URGENT_RED,
                   annotation_text="90% urgent", annotation_position="top left")
-    fig.add_hline(y=94, line_dash="dash", line_color="#f59e0b",
+    fig.add_hline(y=94, line_dash="dash", line_color=AMBER,
                   annotation_text="94% borderline", annotation_position="top left")
-    fig.add_hline(y=95, line_dash="dot", line_color="#16a34a",
+    fig.add_hline(y=95, line_dash="dot", line_color=TEAL_LIGHT,
                   annotation_text="95% normal", annotation_position="top left")
 
     # Accelerometer on secondary y-axis
@@ -77,18 +86,22 @@ def plot_trace(
         fig.add_trace(go.Scatter(
             x=hours, y=trace.accel_magnitude,
             mode="lines", name="Accel (g)",
-            line=dict(color="#9333ea", width=0.5),
-            opacity=0.5,
+            line=dict(color=TEAL_DARK, width=0.5),
+            opacity=0.3,
         ), secondary_y=True)
         fig.update_yaxes(title_text="Accelerometer (g)", secondary_y=True)
 
     fig.update_layout(
-        title=title,
+        title=dict(text=title, font=dict(color=TEAL_DARK, size=14,
+                   family="Playfair Display, Georgia, serif")),
         xaxis_title="Hours into night",
         yaxis_title="SpO2 (%)",
-        yaxis=dict(range=[60, 102]),
+        yaxis=dict(range=[60, 102], gridcolor=BORDER),
+        xaxis=dict(gridcolor=BORDER),
         height=400,
-        template="plotly_white",
+        font=dict(family="DM Sans, system-ui, sans-serif", color=TEAL_DARK),
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor=WARM_WHITE,
         legend=dict(orientation="h", yanchor="bottom", y=1.02),
     )
 

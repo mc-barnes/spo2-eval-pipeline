@@ -149,7 +149,56 @@ The multi-night feature is the highest-leverage improvement for a real version. 
 
 ---
 
-## 8. Open Questions for a Production Version
+## 8. Phases 5-7: LLM Evals, Handoffs, and Dashboard
+
+### Mock vs. live mode architecture
+Every LLM-touching component (evaluators, handoff generator) has a `use_llm=False` default that returns deterministic mock results. This was critical — it let us build the full pipeline, wire it end-to-end, and iterate on the dashboard without spending API credits. The mock path is controlled per-call, not globally, so you can run live evals on a subset while mocking the rest.
+
+**File:** `src/llm_utils.py` — `CostTracker` enforces hard limits (20 calls, $1.00 spend cap).
+
+### Mock eval pass rates are unrealistically high
+The mock evaluators use a simple heuristic: if the assigned label matches ground truth, pass at ~90% rate; if not, pass at ~30%. This produces clean numbers (clinical accuracy 89%, handoff quality 95%, artifact handling 87%) but doesn't exercise the *judgment* that makes LLM evals valuable. A real Claude evaluation might fail a "correct" triage if the handoff language is too jargon-heavy or misses gestational context.
+
+**Iteration needed:** Run even 10-15 traces through real Claude to calibrate how the prompts perform. The few-shot examples in the prompts (`src/evals/*.py`) were designed without testing against actual model responses.
+
+### Handoff templates are adequate but brittle
+The mock handoff generator uses string templates per urgency level (`src/handoff/generator.py`). They hit the four quality criteria (urgency-first, plain language, GA context, actionable next step) because they were written to. A live Claude-generated handoff would be more natural but might miss one of these criteria — which is exactly what the handoff quality evaluator should catch. This eval-generator tension is the interesting part of the demo.
+
+### Expert queue simulation is too clean
+`src/classifier/expert_sim.py` returns ground truth with 95% accuracy. In the dashboard, Expert tier shows 100% accuracy (the 5% noise didn't flip enough labels to show up at n=22). This looks artificial. Options:
+- Increase noise to 10-15% so it's visible
+- Add simulated inter-rater disagreement (two simulated experts, show agreement rate)
+- Or just label it clearly as "simulated oracle" in the dashboard
+
+### Dashboard design: Streamlit limitations
+Streamlit's theming is CSS-override-heavy and fragile. The Owlet branding required a `.streamlit/config.toml` for accent colors plus extensive `st.markdown()` CSS injection. Key constraint: Plotly charts have their own font/color stack that doesn't inherit from Streamlit's theme — you have to set `PLOTLY_LAYOUT` separately and apply it to every chart.
+
+**File:** `.streamlit/config.toml`, `app/dashboard.py` — the `PLOTLY_LAYOUT` dict and CSS block at the top.
+
+---
+
+## 9. Iteration Priorities (Post-Wiring)
+
+Ranked by impact for the portfolio demo use case:
+
+### Must-address before showing to anyone
+1. **Tier 2 accuracy narrative** — 28.4% on ambiguous cases is expected (domain shift, trained on easy cases), but the dashboard needs to frame this. Either add context ("trained on rule-labeled data, tested on the cases rules couldn't handle") or train on a richer signal.
+2. **Expert queue realism** — 100% accuracy at n=22 looks fake. Add noise or relabel as "simulated oracle."
+3. **Run a small live eval** — 10-15 traces through real Claude. This proves the eval prompts work and gives you real reasoning text to show in the dashboard. Estimated cost: ~$0.15-0.30 with Haiku.
+
+### Important for interview readiness
+4. **60-second talk track** — What is this, why did you build it, what did you learn, what would you do differently with real data?
+5. **Dashboard polish** — finish Owlet theming across all pages. The Pipeline Overview page is the money shot.
+6. **GitHub push with README** — recruiters need a link they can click.
+
+### Nice-to-have improvements
+7. **Pattern mining surfacing** — the seeded clinical patterns (2am dip, consecutive nights) are buried under artifact-correlation rules. Could re-tune feature discretization or filter Apriori output to clinical features only.
+8. **Test coverage** — pytest files exist but are minimal. Adding 5-10 focused tests would demonstrate engineering discipline.
+9. **Confusion matrix per tier** — more useful than a single accuracy number. Shows where each tier fails.
+
+---
+
+## 10. Open Questions for a Production Version
 
 1. **What averaging window does the pulse oximeter use?** Clinical monitors average SpO2 over 3-16 heartbeats. Our 1 Hz synthetic data assumes post-averaging output. If you get raw PPG data, the signal processing pipeline is entirely different.
 
