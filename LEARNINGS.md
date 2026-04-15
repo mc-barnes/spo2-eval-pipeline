@@ -406,3 +406,53 @@ Two factors drove the improvement:
 Despite the improvement, the domain shift concern remains: Tier 2 is trained on Tier 1 data (clear cases) and tested on ambiguous ones. The dashboard still shows a yellow warning explaining this. The improvement is real but may not generalize if the underlying data distribution changes.
 
 **File:** `app/dashboard.py` — Tier 2 domain shift warning callout
+
+---
+
+## 19. V2 Clinical Review Findings
+
+Second clinical domain review after applying all P1/P2 fixes from #13. Evaluated live eval results (10 traces) comparing v1 → v2.
+
+### Verdict: NEEDS REVISION
+
+The architecture and clinical fixes from v1 review are sound. The regression is a **prompt maintenance issue**, not a design flaw.
+
+### Root cause: live handoff prompt not updated
+
+When we added the emergency tier, SatSeconds, and GA-adjusted thresholds (LEARNINGS #15), we updated the **mock templates** but forgot to update the **live handoff prompt** (`_HANDOFF_PROMPT` in `src/handoff/generator.py`). The live prompt:
+- Listed urgency options as "URGENT / MONITOR / ROUTINE" — missing EMERGENCY
+- Used fixed "SpO2 <90% >10s" instead of GA-adjusted threshold
+- Had no SatSeconds burden or GA-adjusted threshold fields
+- Lacked clinical correlation questions for urgent/emergency cases
+
+### Root cause: urgency parser silently downgrades EMERGENCY
+
+The parser checked `text.startswith("URGENT")` before checking for EMERGENCY. Since "EMERGENCY" doesn't start with "URGENT", it fell through to the default "ROUTINE" — silently downgrading every emergency handoff to routine.
+
+### Root cause: trace.events vs rule engine events
+
+`_compute_trace_stats` counted events from `trace.events` (synthetic generator events) instead of the rule engine's `events_detected`. These can differ — the generator creates events during signal synthesis, but the rule engine detects events by analyzing the finished signal. The handoff was reporting event counts that didn't match what the triage system actually found.
+
+### Fixes applied
+
+1. **Live prompt**: Added EMERGENCY urgency, SatSeconds burden, GA-adjusted threshold, clinical correlation requirement
+2. **Urgency parser**: EMERGENCY check before URGENT
+3. **Stats dict**: Added `ga_threshold` to returned dict
+4. **Rule engine events**: Added `rule_events` parameter throughout handoff chain; orchestrator passes `tier1_results.events_detected`
+5. **Clinical correlation**: Added family-facing questions to emergency and urgent mock templates
+6. **Live prompt requirements**: Added rules 8 (911 for EMERGENCY) and 9 (clinical correlation for URGENT/EMERGENCY)
+
+### V1 review fixes confirmed adequate
+
+All P1 (safety-critical) and P2 (clinical accuracy) fixes from #13 are working correctly:
+- Urgent false negatives: still 0
+- Safety check: artifact masking cannot hide genuine desats
+- GA-adjusted thresholds: properly stratifying by gestational age
+- Emergency tier: SpO2 <80% correctly routed
+- SatSeconds: computed and displayed in mock templates
+
+### Remaining gaps needing other reviewers
+
+Same as #13 — biostatistician (sample size), regulatory (IEC 62304), human factors (nurse workflow), biomedical engineer (PPG/SQI), data scientist (Tier 2 features).
+
+**Files:** `src/handoff/generator.py`, `src/pipeline/orchestrator.py`

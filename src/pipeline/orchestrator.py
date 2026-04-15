@@ -216,6 +216,9 @@ def run_pipeline(
     # Phase 6: Handoff generation (before Phase 5 — evals need the handoff text)
     print(f"\n[Phase 6] Generating handoffs ({'live' if use_llm else 'mock'})...")
     from src.handoff.generator import generate_handoff
+    # Build map of rule engine detected events per trace (more accurate than
+    # synthetic generator events in trace.events)
+    tier1_events_map = {r.trace_id: r.events_detected for r in tier1_results}
     handoffs = {}
     trace_subset = traces[:llm_sample_size] if use_llm else traces
     for trace in trace_subset:
@@ -224,6 +227,7 @@ def run_pipeline(
         handoffs[trace.night_id] = generate_handoff(
             trace, label, classified_by=source,
             use_llm=use_llm, model=model,
+            rule_events=tier1_events_map.get(trace.night_id),
         )
     print(f"  Generated {len(handoffs)} handoffs")
 

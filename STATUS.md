@@ -23,7 +23,14 @@
 - **Urgent false negatives: 0** (was 2)
 - **Emergency cases detected: 36** (new tier)
 
-## Live Eval Results (10 traces, 30 evals — pre-v2 fixes)
+## Live Eval Results
+
+### V2 (10 traces, 30 evals, $0.19 — post clinical fixes)
+- Clinical accuracy: 70% pass (down from 80% v1)
+- Handoff quality: 30% pass (regressed from 90% v1 — needs investigation)
+- Artifact handling: 100% pass
+
+### V1 (10 traces, 30 evals, $0.18 — pre-v2 fixes)
 - Clinical accuracy: 80% pass
 - Handoff quality: 90% pass (was 20% before template fixes)
 - Artifact handling: 100% pass
@@ -51,16 +58,26 @@ Applied based on domain review (Bonafide/CHOP persona). See LEARNINGS.md #13.
 - Safety check finds desats in raw signal
 - SpO2 80-90% sustained → urgent (not emergency)
 
+## V2 Clinical Review Findings
+Live handoff quality regressed 90% → 30% and clinical accuracy dropped 80% → 70%. Root cause: `_HANDOFF_PROMPT` and urgency parser were never updated when emergency tier, SatSeconds, and GA-adjusted thresholds were added. Mock templates (dashboard) were fine — only the live Claude path was broken. Additionally, `_compute_trace_stats` used synthetic generator events instead of rule engine detected events. See LEARNINGS.md #19 for full details.
+
+**Fixes applied:**
+- [x] Live prompt updated with EMERGENCY, SatSeconds, GA threshold, clinical correlation
+- [x] Urgency parser: EMERGENCY check before URGENT (was silently downgrading to ROUTINE)
+- [x] `ga_threshold` added to stats dict
+- [x] Rule engine events passed through handoff chain (replaces `trace.events`)
+- [x] Clinical correlation questions added to emergency/urgent templates
+
 ## Known Issues
 - Tier 2 accuracy (76.3%) still reflects domain shift — trained on easy cases, tested on harder ones. Dashboard has warning callout.
 - Expert queue 100% accuracy is simulated oracle — dashboard footnote explains this.
 - Mock eval pass rates dropped (66-73%) due to ground truth not including "emergency" label. Live evals would assess correctly.
+- V2 live eval needs rerun after handoff prompt fixes to verify recovery toward 90%.
 
 ## Next Actions
-- [ ] Rerun live eval (10 traces, ~$0.35) to validate v2 changes with real Claude
-- [ ] Write 60-second interview talk track (update existing draft)
+- [ ] Rerun live eval (10 traces, ~$0.35) to validate v2 clinical review fixes
 - [ ] Push to GitHub with README
-- [ ] Run clinical reviewer again on v2 outputs
+- [ ] Write 60-second interview talk track (update existing draft)
 
 ## How To Run
 ```bash

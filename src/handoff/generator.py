@@ -52,7 +52,9 @@ _MOCK_TEMPLATES = {
         "{ga_context} This level of desaturation poses immediate risk.\n\n"
         "Action: Advise family to call 911 or go to nearest emergency department "
         "immediately. If family cannot be reached within 15 minutes, escalate to "
-        "on-call physician for emergency welfare check."
+        "on-call physician for emergency welfare check.\n\n"
+        "Ask family: Is the baby breathing normally? Any visible changes in "
+        "skin color or feeding difficulty?"
     ),
     "urgent": (
         "URGENT — Baby had {n_urgent} desaturation event(s) below threshold overnight, "
@@ -62,7 +64,9 @@ _MOCK_TEMPLATES = {
         "{ga_context} This baby's overnight pattern requires prompt attention.\n\n"
         "Action: Call the family within 1 hour to confirm home oxygen equipment "
         "is functioning and check for visible breathing pauses. Flag for "
-        "pediatrician follow-up today."
+        "pediatrician follow-up today.\n\n"
+        "Ask family: Have you noticed any breathing pauses, skin color changes, "
+        "or feeding difficulty overnight?"
     ),
     "borderline": (
         "MONITOR — Baby had {n_borderline} borderline SpO2 event(s) in the 90-94% "
@@ -101,18 +105,26 @@ _GA_CONTEXT = {
 }
 
 
-def _compute_trace_stats(trace: NightTrace) -> dict:
-    """Extract summary stats needed for handoff templates."""
+def _compute_trace_stats(trace: NightTrace, rule_events: list[dict] | None = None) -> dict:
+    """Extract summary stats needed for handoff templates.
+
+    Args:
+        rule_events: If provided, use rule engine detected events instead of
+                     trace.events (synthetic generator events).
+    """
     spo2 = trace.spo2
     baby = trace.baby
 
+    # Use rule engine events when available (more accurate than generator events)
+    events = rule_events if rule_events is not None else trace.events
+
     # Count events by type
-    n_urgent = sum(1 for e in trace.events if "urgent" in e.get("type", ""))
-    n_borderline = sum(1 for e in trace.events if "borderline" in e.get("type", ""))
-    n_artifacts = sum(1 for e in trace.events if e.get("type") == "artifact")
+    n_urgent = sum(1 for e in events if "urgent" in e.get("type", "") or e.get("rule") == "R1_SAFETY")
+    n_borderline = sum(1 for e in events if "borderline" in e.get("type", ""))
+    n_artifacts = sum(1 for e in events if e.get("type") == "artifact")
 
     # Duration of longest event
-    durations = [e.get("duration_s", 0) for e in trace.events]
+    durations = [e.get("duration_s", 0) for e in events]
     max_dur = max(durations) if durations else 0
 
     ga_desc = "preterm" if baby.gestational_age_weeks < 37 else "term"
@@ -134,12 +146,17 @@ def _compute_trace_stats(trace: NightTrace) -> dict:
         "ga_context": _GA_CONTEXT.get(baby.ga_category, ""),
         "days": baby.days_since_birth,
         "sat_seconds": sat_seconds,
+        "ga_threshold": ga_threshold,
     }
 
 
-def generate_handoff_mock(trace: NightTrace, final_label: str) -> HandoffSummary:
+def generate_handoff_mock(
+    trace: NightTrace,
+    final_label: str,
+    rule_events: list[dict] | None = None,
+) -> HandoffSummary:
     """Generate a handoff using templates (no API call)."""
-    stats = _compute_trace_stats(trace)
+    stats = _compute_trace_stats(trace, rule_events=rule_events)
     template = _MOCK_TEMPLATES.get(final_label, _MOCK_TEMPLATES["normal"])
     summary_text = template.format(**stats)
     urgency = _URGENCY_MAP.get(final_label, "ROUTINE")
@@ -173,18 +190,22 @@ OVERNIGHT MONITORING RESULTS:
 - Classified by: {classified_by}
 - Mean SpO2: {mean_spo2:.1f}%
 - Minimum SpO2: {min_spo2:.0f}%
-- Desaturation events (SpO2 <90% >10s): {n_urgent}
-- Borderline events (SpO2 90-94% sustained): {n_borderline}
+- Desaturation events (SpO2 <{ga_threshold}% >10s): {n_urgent}
+- Borderline events (SpO2 near threshold, sustained): {n_borderline}
 - Artifact events excluded: {n_artifacts}
+- SatSeconds burden (hypoxemic severity): {sat_seconds:.0f}
+- Desaturation threshold (GA-adjusted): {ga_threshold}%
 
 REQUIREMENTS:
-1. Start with urgency level in caps: URGENT / MONITOR / ROUTINE
+1. Start with urgency level in caps: EMERGENCY / URGENT / MONITOR / ROUTINE
 2. First sentence: the single most important clinical finding
 3. Second paragraph: gestational age context and how it affects interpretation
 4. Third paragraph: specific actionable next step for the nurse
 5. Plain language appropriate for a telehealth nurse (not a neonatologist)
 6. Keep to 4-6 sentences total
 7. If artifact events were excluded, briefly note this
+8. For EMERGENCY cases, direct family to call 911 or go to nearest ED
+9. For URGENT or EMERGENCY, include a clinical correlation question for the family
 
 Generate the handoff summary now."""
 
@@ -194,11 +215,12 @@ def generate_handoff_live(
     final_label: str,
     classified_by: str = "pipeline",
     model: str | None = None,
+    rule_events: list[dict] | None = None,
 ) -> HandoffSummary | None:
     """Generate a handoff using Claude API. Returns None if budget exceeded."""
     from src.llm_utils import call_llm
 
-    stats = _compute_trace_stats(trace)
+    stats = _compute_trace_stats(trace, rule_events=rule_events)
     baby = trace.baby
 
     prompt = _HANDOFF_PROMPT.format(
@@ -215,6 +237,8 @@ def generate_handoff_live(
         n_urgent=stats["n_urgent"],
         n_borderline=stats["n_borderline"],
         n_artifacts=stats["n_artifacts"],
+        sat_seconds=stats["sat_seconds"],
+        ga_threshold=stats["ga_threshold"],
     )
 
     result = call_llm(prompt, model=model, max_tokens=400)
@@ -223,7 +247,9 @@ def generate_handoff_live(
 
     # Parse urgency from the response
     text = result["text"]
-    if text.startswith("URGENT"):
+    if text.startswith("EMERGENCY"):
+        urgency = "EMERGENCY"
+    elif text.startswith("URGENT"):
         urgency = "URGENT"
     elif text.startswith("MONITOR"):
         urgency = "MONITOR"
@@ -251,13 +277,17 @@ def generate_handoff(
     classified_by: str = "pipeline",
     use_llm: bool = False,
     model: str | None = None,
+    rule_events: list[dict] | None = None,
 ) -> HandoffSummary:
     """Generate a handoff summary. Mock by default, live with use_llm=True."""
     if use_llm:
-        result = generate_handoff_live(trace, final_label, classified_by, model)
+        result = generate_handoff_live(
+            trace, final_label, classified_by, model,
+            rule_events=rule_events,
+        )
         if result is not None:
             return result
         # Fall back to mock if API call failed or budget exceeded
         print(f"[HANDOFF] Falling back to mock for trace {trace.night_id}")
 
-    return generate_handoff_mock(trace, final_label)
+    return generate_handoff_mock(trace, final_label, rule_events=rule_events)
