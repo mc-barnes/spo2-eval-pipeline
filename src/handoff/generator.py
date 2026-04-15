@@ -206,6 +206,7 @@ REQUIREMENTS:
 7. If artifact events were excluded, briefly note this
 8. For EMERGENCY cases, direct family to call 911 or go to nearest ED
 9. For URGENT or EMERGENCY, include a clinical correlation question for the family
+10. Every action step MUST include a specific timeframe (e.g., "within 1 hour", "within 48 hours", "in 7 days"). Never say "at your next scheduled check-in" without a concrete timeframe.
 
 Generate the handoff summary now."""
 
@@ -245,13 +246,14 @@ def generate_handoff_live(
     if result is None:
         return None
 
-    # Parse urgency from the response
+    # Parse urgency from the response (strip markdown formatting like **URGENT** or # URGENT)
     text = result["text"]
-    if text.startswith("EMERGENCY"):
+    text_clean = text.lstrip("#* \t")
+    if text_clean.startswith("EMERGENCY"):
         urgency = "EMERGENCY"
-    elif text.startswith("URGENT"):
+    elif text_clean.startswith("URGENT"):
         urgency = "URGENT"
-    elif text.startswith("MONITOR"):
+    elif text_clean.startswith("MONITOR"):
         urgency = "MONITOR"
     else:
         urgency = "ROUTINE"

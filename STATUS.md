@@ -25,9 +25,14 @@
 
 ## Live Eval Results
 
-### V2 (10 traces, 30 evals, $0.19 — post clinical fixes)
+### V2.1 (10 traces, 30 evals, $0.20 — after prompt + parser fixes)
+- Clinical accuracy: 60-70% pass (variance across runs)
+- Handoff quality: 80% pass (recovered from 20-30% pre-fix)
+- Artifact handling: 100% pass
+
+### V2 (10 traces, 30 evals, $0.19 — post clinical fixes, pre prompt fix)
 - Clinical accuracy: 70% pass (down from 80% v1)
-- Handoff quality: 30% pass (regressed from 90% v1 — needs investigation)
+- Handoff quality: 30% pass (regressed — live prompt not updated)
 - Artifact handling: 100% pass
 
 ### V1 (10 traces, 30 evals, $0.18 — pre-v2 fixes)
@@ -72,10 +77,10 @@ Live handoff quality regressed 90% → 30% and clinical accuracy dropped 80% →
 - Tier 2 accuracy (76.3%) still reflects domain shift — trained on easy cases, tested on harder ones. Dashboard has warning callout.
 - Expert queue 100% accuracy is simulated oracle — dashboard footnote explains this.
 - Mock eval pass rates dropped (66-73%) due to ground truth not including "emergency" label. Live evals would assess correctly.
-- V2 live eval needs rerun after handoff prompt fixes to verify recovery toward 90%.
+- Handoff quality recovered to 80% after prompt fixes but hasn't reached v1's 90%. Remaining failures are legitimate edge cases (label mismatches where GT≠assigned).
 
 ## Next Actions
-- [ ] Rerun live eval (10 traces, ~$0.35) to validate v2 clinical review fixes
+- [x] Rerun live eval — handoff quality recovered 30% → 80%
 - [ ] Push to GitHub with README
 - [ ] Write 60-second interview talk track (update existing draft)
 
