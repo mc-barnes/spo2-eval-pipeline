@@ -428,6 +428,11 @@ def generate_trace(
     # Timestamp: arbitrary start date, 9pm
     start = datetime(2025, 1, 1, 21, 0) + timedelta(days=night_number - 1)
 
+    # Refine urgent → emergency when the generated signal has sustained SpO2 <80%
+    label = pattern_type
+    if pattern_type == "urgent" and np.min(spo2) < 80:
+        label = "emergency"
+
     return NightTrace(
         baby=baby,
         night_id=str(uuid.uuid4())[:8],
@@ -436,7 +441,7 @@ def generate_trace(
         spo2=spo2,
         accelerometer=accel,
         accel_magnitude=accel_mag,
-        ground_truth_label=pattern_type,
+        ground_truth_label=label,
         events=events,
     )
 

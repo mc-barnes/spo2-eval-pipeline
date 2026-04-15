@@ -89,7 +89,7 @@ def evaluate_clinical_accuracy(
         assigned_label=assigned_label,
     )
 
-    result = call_llm(prompt, model=model, max_tokens=300)
+    result = call_llm(prompt, model=model, max_tokens=500)
     if result is None:
         return mock_eval(
             trace.night_id, "clinical_accuracy",
