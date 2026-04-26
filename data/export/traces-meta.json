@@ -1,0 +1,7814 @@
+[
+  {
+    "night_id": "5aeeb6d6",
+    "baby": {
+      "baby_id": "1d196b8f",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 3377,
+      "days_since_birth": 39,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.9,
+      "spo2_variability": 0.3
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.9,
+      "min_spo2": 96.5,
+      "std_spo2": 0.38,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "86ae5c70",
+    "baby": {
+      "baby_id": "1d196b8f",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 3377,
+      "days_since_birth": 39,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.9,
+      "spo2_variability": 0.3
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.9,
+      "min_spo2": 97.4,
+      "std_spo2": 0.51,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "2b5e99fd",
+    "baby": {
+      "baby_id": "1d196b8f",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 3377,
+      "days_since_birth": 39,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.9,
+      "spo2_variability": 0.3
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.9,
+      "min_spo2": 92.6,
+      "std_spo2": 0.46,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "5c150cd1",
+    "baby": {
+      "baby_id": "1a0da335",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 3971,
+      "days_since_birth": 69,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.7,
+      "spo2_variability": 0.79
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.7,
+      "min_spo2": 95.8,
+      "std_spo2": 0.42,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "03b44f9a",
+    "baby": {
+      "baby_id": "1a0da335",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 3971,
+      "days_since_birth": 69,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.7,
+      "spo2_variability": 0.79
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.7,
+      "min_spo2": 95.0,
+      "std_spo2": 0.49,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "a325033a",
+    "baby": {
+      "baby_id": "1a0da335",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 3971,
+      "days_since_birth": 69,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.7,
+      "spo2_variability": 0.79
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 97.7,
+      "min_spo2": 91.8,
+      "std_spo2": 0.46,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "88e52917",
+    "baby": {
+      "baby_id": "c9dfca42",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2059,
+      "days_since_birth": 17,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.1,
+      "spo2_variability": 1.14
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.1,
+      "min_spo2": 90.8,
+      "std_spo2": 0.52,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "4fdb6900",
+    "baby": {
+      "baby_id": "c9dfca42",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2059,
+      "days_since_birth": 17,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.1,
+      "spo2_variability": 1.14
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 96.0,
+      "min_spo2": 90.6,
+      "std_spo2": 0.52,
+      "n_events": 10
+    }
+  },
+  {
+    "night_id": "4f57ee0c",
+    "baby": {
+      "baby_id": "c9dfca42",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2059,
+      "days_since_birth": 17,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.1,
+      "spo2_variability": 1.14
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.0,
+      "min_spo2": 73.6,
+      "std_spo2": 1.65,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "724bde4a",
+    "baby": {
+      "baby_id": "0621dc7d",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1073,
+      "days_since_birth": 50,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 93.0,
+      "spo2_variability": 1.44
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 92.9,
+      "min_spo2": 72.7,
+      "std_spo2": 1.43,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "e3b20aac",
+    "baby": {
+      "baby_id": "0621dc7d",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1073,
+      "days_since_birth": 50,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 93.0,
+      "spo2_variability": 1.44
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.984,
+    "stats": {
+      "mean_spo2": 93.0,
+      "min_spo2": 91.1,
+      "std_spo2": 0.43,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "d87e0f5e",
+    "baby": {
+      "baby_id": "0621dc7d",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1073,
+      "days_since_birth": 50,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 93.0,
+      "spo2_variability": 1.44
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.95,
+    "stats": {
+      "mean_spo2": 93.0,
+      "min_spo2": 49.4,
+      "std_spo2": 0.85,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "b205f1ec",
+    "baby": {
+      "baby_id": "2b911b66",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1776,
+      "days_since_birth": 41,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 93.5,
+      "spo2_variability": 1.61
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.8,
+    "stats": {
+      "mean_spo2": 93.5,
+      "min_spo2": 44.7,
+      "std_spo2": 0.83,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "9b641f40",
+    "baby": {
+      "baby_id": "2b911b66",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1776,
+      "days_since_birth": 41,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 93.5,
+      "spo2_variability": 1.61
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.991,
+    "stats": {
+      "mean_spo2": 93.5,
+      "min_spo2": 91.2,
+      "std_spo2": 0.47,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "44616d7b",
+    "baby": {
+      "baby_id": "2b911b66",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1776,
+      "days_since_birth": 41,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 93.5,
+      "spo2_variability": 1.61
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 93.3,
+      "min_spo2": 74.6,
+      "std_spo2": 1.6,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "46b2a43d",
+    "baby": {
+      "baby_id": "d2aaee3b",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 871,
+      "days_since_birth": 62,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.5,
+      "spo2_variability": 1.76
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.5,
+      "min_spo2": 88.6,
+      "std_spo2": 0.37,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "00e67df0",
+    "baby": {
+      "baby_id": "d2aaee3b",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 871,
+      "days_since_birth": 62,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.5,
+      "spo2_variability": 1.76
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.95,
+    "stats": {
+      "mean_spo2": 90.5,
+      "min_spo2": 42.5,
+      "std_spo2": 1.19,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "ad780aad",
+    "baby": {
+      "baby_id": "d2aaee3b",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 871,
+      "days_since_birth": 62,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.5,
+      "spo2_variability": 1.76
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.5,
+      "min_spo2": 88.7,
+      "std_spo2": 0.35,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "b14b1a97",
+    "baby": {
+      "baby_id": "bc1c76d7",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1932,
+      "days_since_birth": 42,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.2,
+      "spo2_variability": 1.2
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 94.2,
+      "min_spo2": 44.6,
+      "std_spo2": 0.95,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "4e764a82",
+    "baby": {
+      "baby_id": "bc1c76d7",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1932,
+      "days_since_birth": 42,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.2,
+      "spo2_variability": 1.2
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 94.2,
+      "min_spo2": 63.5,
+      "std_spo2": 0.49,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "1b9f2599",
+    "baby": {
+      "baby_id": "bc1c76d7",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1932,
+      "days_since_birth": 42,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.2,
+      "spo2_variability": 1.2
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 94.1,
+      "min_spo2": 76.1,
+      "std_spo2": 0.88,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "eaa109a0",
+    "baby": {
+      "baby_id": "e9c888d9",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1128,
+      "days_since_birth": 75,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.3,
+      "spo2_variability": 1.57
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 92.3,
+      "min_spo2": 91.0,
+      "std_spo2": 0.44,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "61f63eae",
+    "baby": {
+      "baby_id": "e9c888d9",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1128,
+      "days_since_birth": 75,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.3,
+      "spo2_variability": 1.57
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 92.3,
+      "min_spo2": 90.2,
+      "std_spo2": 0.46,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "bfcff736",
+    "baby": {
+      "baby_id": "e9c888d9",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1128,
+      "days_since_birth": 75,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.3,
+      "spo2_variability": 1.57
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 92.3,
+      "min_spo2": 89.9,
+      "std_spo2": 0.41,
+      "n_events": 9
+    }
+  },
+  {
+    "night_id": "127a74e4",
+    "baby": {
+      "baby_id": "f24caf4e",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1230,
+      "days_since_birth": 22,
+      "known_conditions": [
+        "apnea_of_prematurity",
+        "bpd"
+      ],
+      "spo2_baseline": 93.1,
+      "spo2_variability": 1.59
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.947,
+    "stats": {
+      "mean_spo2": 93.1,
+      "min_spo2": 89.7,
+      "std_spo2": 0.42,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "ee964df9",
+    "baby": {
+      "baby_id": "f24caf4e",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1230,
+      "days_since_birth": 22,
+      "known_conditions": [
+        "apnea_of_prematurity",
+        "bpd"
+      ],
+      "spo2_baseline": 93.1,
+      "spo2_variability": 1.59
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.938,
+    "stats": {
+      "mean_spo2": 93.1,
+      "min_spo2": 90.4,
+      "std_spo2": 0.41,
+      "n_events": 10
+    }
+  },
+  {
+    "night_id": "f7796db2",
+    "baby": {
+      "baby_id": "f24caf4e",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1230,
+      "days_since_birth": 22,
+      "known_conditions": [
+        "apnea_of_prematurity",
+        "bpd"
+      ],
+      "spo2_baseline": 93.1,
+      "spo2_variability": 1.59
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.865,
+    "stats": {
+      "mean_spo2": 93.1,
+      "min_spo2": 90.9,
+      "std_spo2": 0.35,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "93f2c640",
+    "baby": {
+      "baby_id": "f4edcde6",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2130,
+      "days_since_birth": 64,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.5,
+      "spo2_variability": 0.81
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.937,
+    "stats": {
+      "mean_spo2": 94.5,
+      "min_spo2": 90.1,
+      "std_spo2": 0.47,
+      "n_events": 9
+    }
+  },
+  {
+    "night_id": "e1eb9fe6",
+    "baby": {
+      "baby_id": "f4edcde6",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2130,
+      "days_since_birth": 64,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.5,
+      "spo2_variability": 0.81
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 94.5,
+      "min_spo2": 90.8,
+      "std_spo2": 0.4,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "f525cc88",
+    "baby": {
+      "baby_id": "f4edcde6",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2130,
+      "days_since_birth": 64,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.5,
+      "spo2_variability": 0.81
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 94.5,
+      "min_spo2": 90.7,
+      "std_spo2": 0.45,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "baeeb044",
+    "baby": {
+      "baby_id": "6de79186",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 557,
+      "days_since_birth": 40,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.7,
+      "spo2_variability": 2.05
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.7,
+      "min_spo2": 89.0,
+      "std_spo2": 0.4,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "cc99602c",
+    "baby": {
+      "baby_id": "6de79186",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 557,
+      "days_since_birth": 40,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.7,
+      "spo2_variability": 2.05
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.8,
+    "stats": {
+      "mean_spo2": 90.7,
+      "min_spo2": 43.0,
+      "std_spo2": 0.75,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "8e1380f0",
+    "baby": {
+      "baby_id": "6de79186",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 557,
+      "days_since_birth": 40,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.7,
+      "spo2_variability": 2.05
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.7,
+      "min_spo2": 89.1,
+      "std_spo2": 0.34,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "cf816dc6",
+    "baby": {
+      "baby_id": "395d3ce1",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1863,
+      "days_since_birth": 51,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.7,
+      "spo2_variability": 0.86
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.837,
+    "stats": {
+      "mean_spo2": 94.7,
+      "min_spo2": 93.4,
+      "std_spo2": 0.42,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "8f4ec83c",
+    "baby": {
+      "baby_id": "395d3ce1",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1863,
+      "days_since_birth": 51,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.7,
+      "spo2_variability": 0.86
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 94.7,
+      "min_spo2": 90.2,
+      "std_spo2": 0.43,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "5891b128",
+    "baby": {
+      "baby_id": "395d3ce1",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1863,
+      "days_since_birth": 51,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.7,
+      "spo2_variability": 0.86
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.829,
+    "stats": {
+      "mean_spo2": 94.7,
+      "min_spo2": 93.3,
+      "std_spo2": 0.43,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "c2b44f41",
+    "baby": {
+      "baby_id": "dba7c8e1",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1326,
+      "days_since_birth": 90,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 93.5,
+      "spo2_variability": 1.54
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 93.5,
+      "min_spo2": 90.3,
+      "std_spo2": 0.39,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "8ed83eb2",
+    "baby": {
+      "baby_id": "dba7c8e1",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1326,
+      "days_since_birth": 90,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 93.5,
+      "spo2_variability": 1.54
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 93.5,
+      "min_spo2": 91.9,
+      "std_spo2": 0.46,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "56b344a8",
+    "baby": {
+      "baby_id": "dba7c8e1",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1326,
+      "days_since_birth": 90,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 93.5,
+      "spo2_variability": 1.54
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 93.4,
+      "min_spo2": 71.9,
+      "std_spo2": 1.13,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "93eb70ab",
+    "baby": {
+      "baby_id": "ab0f2d42",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1888,
+      "days_since_birth": 51,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.6,
+      "spo2_variability": 0.91
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.8,
+    "stats": {
+      "mean_spo2": 95.6,
+      "min_spo2": 54.7,
+      "std_spo2": 0.63,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "3064868a",
+    "baby": {
+      "baby_id": "ab0f2d42",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1888,
+      "days_since_birth": 51,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.6,
+      "spo2_variability": 0.91
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 95.6,
+      "min_spo2": 49.8,
+      "std_spo2": 0.83,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "8ae23817",
+    "baby": {
+      "baby_id": "ab0f2d42",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1888,
+      "days_since_birth": 51,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.6,
+      "spo2_variability": 0.91
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.962,
+    "stats": {
+      "mean_spo2": 95.6,
+      "min_spo2": 94.3,
+      "std_spo2": 0.36,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "7ab7bb25",
+    "baby": {
+      "baby_id": "3c29715a",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 2833,
+      "days_since_birth": 31,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.6,
+      "spo2_variability": 0.44
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.6,
+      "min_spo2": 94.9,
+      "std_spo2": 0.47,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "686f407b",
+    "baby": {
+      "baby_id": "3c29715a",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 2833,
+      "days_since_birth": 31,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.6,
+      "spo2_variability": 0.44
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.6,
+      "min_spo2": 91.2,
+      "std_spo2": 0.57,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "811f210b",
+    "baby": {
+      "baby_id": "3c29715a",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 2833,
+      "days_since_birth": 31,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.6,
+      "spo2_variability": 0.44
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.6,
+      "min_spo2": 95.4,
+      "std_spo2": 0.26,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "d258460c",
+    "baby": {
+      "baby_id": "5a909f06",
+      "gestational_age_weeks": 32,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2301,
+      "days_since_birth": 15,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.5,
+      "spo2_variability": 1.13
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.954,
+    "stats": {
+      "mean_spo2": 95.5,
+      "min_spo2": 93.5,
+      "std_spo2": 0.41,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "4e11b8de",
+    "baby": {
+      "baby_id": "5a909f06",
+      "gestational_age_weeks": 32,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2301,
+      "days_since_birth": 15,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.5,
+      "spo2_variability": 1.13
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.959,
+    "stats": {
+      "mean_spo2": 95.5,
+      "min_spo2": 94.1,
+      "std_spo2": 0.48,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "9ce2e067",
+    "baby": {
+      "baby_id": "5a909f06",
+      "gestational_age_weeks": 32,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2301,
+      "days_since_birth": 15,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.5,
+      "spo2_variability": 1.13
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "expert_review",
+    "confidence": 0.89,
+    "stats": {
+      "mean_spo2": 95.5,
+      "min_spo2": 91.8,
+      "std_spo2": 0.39,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "5b12090c",
+    "baby": {
+      "baby_id": "fa91782b",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1304,
+      "days_since_birth": 22,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 91.6,
+      "spo2_variability": 1.1
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 91.5,
+      "min_spo2": 74.9,
+      "std_spo2": 1.13,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "e64b3586",
+    "baby": {
+      "baby_id": "fa91782b",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1304,
+      "days_since_birth": 22,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 91.6,
+      "spo2_variability": 1.1
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 91.6,
+      "min_spo2": 46.4,
+      "std_spo2": 0.73,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "06d6bc54",
+    "baby": {
+      "baby_id": "fa91782b",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1304,
+      "days_since_birth": 22,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 91.6,
+      "spo2_variability": 1.1
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.997,
+    "stats": {
+      "mean_spo2": 91.6,
+      "min_spo2": 90.0,
+      "std_spo2": 0.42,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "862b7f3d",
+    "baby": {
+      "baby_id": "6250b074",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 3232,
+      "days_since_birth": 82,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 0.69
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 95.0,
+      "std_spo2": 0.44,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "0ec52ed1",
+    "baby": {
+      "baby_id": "6250b074",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 3232,
+      "days_since_birth": 82,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 0.69
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.7,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 90.1,
+      "std_spo2": 0.58,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "44b4d71d",
+    "baby": {
+      "baby_id": "6250b074",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 3232,
+      "days_since_birth": 82,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 0.69
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 94.2,
+      "std_spo2": 0.49,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "3a096b58",
+    "baby": {
+      "baby_id": "95d27ecd",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 4057,
+      "days_since_birth": 24,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 0.74
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.9,
+      "min_spo2": 65.2,
+      "std_spo2": 1.76,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "6cbee96d",
+    "baby": {
+      "baby_id": "95d27ecd",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 4057,
+      "days_since_birth": 24,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 0.74
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 94.7,
+      "std_spo2": 0.41,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "2b904af3",
+    "baby": {
+      "baby_id": "95d27ecd",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 4057,
+      "days_since_birth": 24,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 0.74
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 90.5,
+      "std_spo2": 0.53,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "acec40a2",
+    "baby": {
+      "baby_id": "b4055044",
+      "gestational_age_weeks": 26,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 723,
+      "days_since_birth": 82,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 91.4,
+      "spo2_variability": 2.07
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.4,
+      "min_spo2": 90.0,
+      "std_spo2": 0.44,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "739eb2f1",
+    "baby": {
+      "baby_id": "b4055044",
+      "gestational_age_weeks": 26,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 723,
+      "days_since_birth": 82,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 91.4,
+      "spo2_variability": 2.07
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.4,
+      "min_spo2": 88.5,
+      "std_spo2": 0.38,
+      "n_events": 10
+    }
+  },
+  {
+    "night_id": "2a2943aa",
+    "baby": {
+      "baby_id": "b4055044",
+      "gestational_age_weeks": 26,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 723,
+      "days_since_birth": 82,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 91.4,
+      "spo2_variability": 2.07
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.4,
+      "min_spo2": 89.8,
+      "std_spo2": 0.3,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "e79de6fd",
+    "baby": {
+      "baby_id": "43392d14",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 928,
+      "days_since_birth": 2,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 91.0,
+      "spo2_variability": 2.48
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 91.0,
+      "min_spo2": 89.6,
+      "std_spo2": 0.42,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "0d9e2a42",
+    "baby": {
+      "baby_id": "43392d14",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 928,
+      "days_since_birth": 2,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 91.0,
+      "spo2_variability": 2.48
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.0,
+      "min_spo2": 89.2,
+      "std_spo2": 0.42,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "5171c133",
+    "baby": {
+      "baby_id": "43392d14",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 928,
+      "days_since_birth": 2,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 91.0,
+      "spo2_variability": 2.48
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.0,
+      "min_spo2": 89.3,
+      "std_spo2": 0.35,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "29d78439",
+    "baby": {
+      "baby_id": "888975a7",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2240,
+      "days_since_birth": 8,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.2,
+      "spo2_variability": 1.41
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 95.2,
+      "min_spo2": 51.7,
+      "std_spo2": 0.59,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "d7b1907f",
+    "baby": {
+      "baby_id": "888975a7",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2240,
+      "days_since_birth": 8,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.2,
+      "spo2_variability": 1.41
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.994,
+    "stats": {
+      "mean_spo2": 95.2,
+      "min_spo2": 93.7,
+      "std_spo2": 0.48,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "3c1d8d40",
+    "baby": {
+      "baby_id": "888975a7",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2240,
+      "days_since_birth": 8,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.2,
+      "spo2_variability": 1.41
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.996,
+    "stats": {
+      "mean_spo2": 95.2,
+      "min_spo2": 93.9,
+      "std_spo2": 0.38,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "17bdae92",
+    "baby": {
+      "baby_id": "6f9d6056",
+      "gestational_age_weeks": 30,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1115,
+      "days_since_birth": 61,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 92.1,
+      "spo2_variability": 1.38
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 92.1,
+      "min_spo2": 90.4,
+      "std_spo2": 0.37,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "0d6603af",
+    "baby": {
+      "baby_id": "6f9d6056",
+      "gestational_age_weeks": 30,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1115,
+      "days_since_birth": 61,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 92.1,
+      "spo2_variability": 1.38
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 92.1,
+      "min_spo2": 90.2,
+      "std_spo2": 0.42,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "476e7ac1",
+    "baby": {
+      "baby_id": "6f9d6056",
+      "gestational_age_weeks": 30,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1115,
+      "days_since_birth": 61,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 92.1,
+      "spo2_variability": 1.38
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 92.1,
+      "min_spo2": 45.9,
+      "std_spo2": 0.81,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "4515cfea",
+    "baby": {
+      "baby_id": "2a51a579",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1489,
+      "days_since_birth": 54,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 92.0,
+      "spo2_variability": 1.59
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 92.0,
+      "min_spo2": 47.8,
+      "std_spo2": 0.8,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "f793c066",
+    "baby": {
+      "baby_id": "2a51a579",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1489,
+      "days_since_birth": 54,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 92.0,
+      "spo2_variability": 1.59
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 92.0,
+      "min_spo2": 90.4,
+      "std_spo2": 0.31,
+      "n_events": 9
+    }
+  },
+  {
+    "night_id": "a38d13b9",
+    "baby": {
+      "baby_id": "2a51a579",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1489,
+      "days_since_birth": 54,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 92.0,
+      "spo2_variability": 1.59
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.8,
+    "stats": {
+      "mean_spo2": 92.0,
+      "min_spo2": 55.6,
+      "std_spo2": 0.58,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "6559752f",
+    "baby": {
+      "baby_id": "7bb14452",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 743,
+      "days_since_birth": 61,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 88.9,
+      "spo2_variability": 2.08
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.8,
+    "stats": {
+      "mean_spo2": 88.9,
+      "min_spo2": 43.8,
+      "std_spo2": 0.75,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "a6401a9e",
+    "baby": {
+      "baby_id": "7bb14452",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 743,
+      "days_since_birth": 61,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 88.9,
+      "spo2_variability": 2.08
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 88.9,
+      "min_spo2": 87.4,
+      "std_spo2": 0.28,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "4cc7549a",
+    "baby": {
+      "baby_id": "7bb14452",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 743,
+      "days_since_birth": 61,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 88.9,
+      "spo2_variability": 2.08
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 88.9,
+      "min_spo2": 67.7,
+      "std_spo2": 0.48,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "9dd3b060",
+    "baby": {
+      "baby_id": "ea6c0f46",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1436,
+      "days_since_birth": 47,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 94.1,
+      "spo2_variability": 1.55
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 93.9,
+      "min_spo2": 72.9,
+      "std_spo2": 1.8,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "82762f9a",
+    "baby": {
+      "baby_id": "ea6c0f46",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1436,
+      "days_since_birth": 47,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 94.1,
+      "spo2_variability": 1.55
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.7,
+    "stats": {
+      "mean_spo2": 94.1,
+      "min_spo2": 89.8,
+      "std_spo2": 0.42,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "c3ebb858",
+    "baby": {
+      "baby_id": "ea6c0f46",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1436,
+      "days_since_birth": 47,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 94.1,
+      "spo2_variability": 1.55
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 94.1,
+      "min_spo2": 90.0,
+      "std_spo2": 0.47,
+      "n_events": 10
+    }
+  },
+  {
+    "night_id": "32e404e7",
+    "baby": {
+      "baby_id": "366de9e4",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 777,
+      "days_since_birth": 29,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 91.3,
+      "spo2_variability": 2.53
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.3,
+      "min_spo2": 89.5,
+      "std_spo2": 0.29,
+      "n_events": 10
+    }
+  },
+  {
+    "night_id": "bbeda1f5",
+    "baby": {
+      "baby_id": "366de9e4",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 777,
+      "days_since_birth": 29,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 91.3,
+      "spo2_variability": 2.53
+    },
+    "night_number": 2,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 91.1,
+      "min_spo2": 74.0,
+      "std_spo2": 1.42,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "2cdaca8b",
+    "baby": {
+      "baby_id": "366de9e4",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 777,
+      "days_since_birth": 29,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 91.3,
+      "spo2_variability": 2.53
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.3,
+      "min_spo2": 89.6,
+      "std_spo2": 0.32,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "9a0d75f9",
+    "baby": {
+      "baby_id": "90ca0050",
+      "gestational_age_weeks": 37,
+      "ga_category": "term",
+      "birth_weight_grams": 3141,
+      "days_since_birth": 10,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.5,
+      "spo2_variability": 0.44
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.7,
+    "stats": {
+      "mean_spo2": 97.5,
+      "min_spo2": 90.4,
+      "std_spo2": 0.57,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "ddd61fd1",
+    "baby": {
+      "baby_id": "90ca0050",
+      "gestational_age_weeks": 37,
+      "ga_category": "term",
+      "birth_weight_grams": 3141,
+      "days_since_birth": 10,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.5,
+      "spo2_variability": 0.44
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.5,
+      "min_spo2": 74.0,
+      "std_spo2": 0.52,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "687708c4",
+    "baby": {
+      "baby_id": "90ca0050",
+      "gestational_age_weeks": 37,
+      "ga_category": "term",
+      "birth_weight_grams": 3141,
+      "days_since_birth": 10,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.5,
+      "spo2_variability": 0.44
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 97.5,
+      "min_spo2": 55.0,
+      "std_spo2": 0.71,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "34bdf15a",
+    "baby": {
+      "baby_id": "b331d663",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 777,
+      "days_since_birth": 50,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.1,
+      "spo2_variability": 2.28
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.1,
+      "min_spo2": 88.4,
+      "std_spo2": 0.3,
+      "n_events": 9
+    }
+  },
+  {
+    "night_id": "e9945d8a",
+    "baby": {
+      "baby_id": "b331d663",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 777,
+      "days_since_birth": 50,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.1,
+      "spo2_variability": 2.28
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.1,
+      "min_spo2": 88.6,
+      "std_spo2": 0.25,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "c31fa8e0",
+    "baby": {
+      "baby_id": "b331d663",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 777,
+      "days_since_birth": 50,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.1,
+      "spo2_variability": 2.28
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.1,
+      "min_spo2": 88.2,
+      "std_spo2": 0.43,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "bd1e1394",
+    "baby": {
+      "baby_id": "2c2d51dd",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1497,
+      "days_since_birth": 47,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.4,
+      "spo2_variability": 1.36
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.934,
+    "stats": {
+      "mean_spo2": 93.4,
+      "min_spo2": 58.6,
+      "std_spo2": 0.48,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "20304064",
+    "baby": {
+      "baby_id": "2c2d51dd",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1497,
+      "days_since_birth": 47,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.4,
+      "spo2_variability": 1.36
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 93.4,
+      "min_spo2": 68.3,
+      "std_spo2": 0.44,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "1fe29108",
+    "baby": {
+      "baby_id": "2c2d51dd",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1497,
+      "days_since_birth": 47,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.4,
+      "spo2_variability": 1.36
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.994,
+    "stats": {
+      "mean_spo2": 93.4,
+      "min_spo2": 90.7,
+      "std_spo2": 0.3,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "6f3ff00b",
+    "baby": {
+      "baby_id": "45355f08",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1793,
+      "days_since_birth": 14,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.9,
+      "spo2_variability": 1.59
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 92.9,
+      "min_spo2": 60.5,
+      "std_spo2": 0.59,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "29007003",
+    "baby": {
+      "baby_id": "45355f08",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1793,
+      "days_since_birth": 14,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.9,
+      "spo2_variability": 1.59
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 92.9,
+      "min_spo2": 90.2,
+      "std_spo2": 0.47,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "547fec17",
+    "baby": {
+      "baby_id": "45355f08",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1793,
+      "days_since_birth": 14,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.9,
+      "spo2_variability": 1.59
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "expert_review",
+    "confidence": 0.96,
+    "stats": {
+      "mean_spo2": 92.9,
+      "min_spo2": 91.8,
+      "std_spo2": 0.33,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "f59aa7d9",
+    "baby": {
+      "baby_id": "f2938949",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1017,
+      "days_since_birth": 70,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.4,
+      "spo2_variability": 1.96
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 93.4,
+      "min_spo2": 89.5,
+      "std_spo2": 0.4,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "5492af2c",
+    "baby": {
+      "baby_id": "f2938949",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1017,
+      "days_since_birth": 70,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.4,
+      "spo2_variability": 1.96
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.997,
+    "stats": {
+      "mean_spo2": 93.4,
+      "min_spo2": 90.6,
+      "std_spo2": 0.44,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "2809439a",
+    "baby": {
+      "baby_id": "f2938949",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1017,
+      "days_since_birth": 70,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.4,
+      "spo2_variability": 1.96
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.993,
+    "stats": {
+      "mean_spo2": 93.4,
+      "min_spo2": 91.4,
+      "std_spo2": 0.38,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "8fcbe92b",
+    "baby": {
+      "baby_id": "dc326bce",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1749,
+      "days_since_birth": 86,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 92.8,
+      "spo2_variability": 1.39
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 92.8,
+      "min_spo2": 91.6,
+      "std_spo2": 0.35,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "e61ce3d0",
+    "baby": {
+      "baby_id": "dc326bce",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1749,
+      "days_since_birth": 86,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 92.8,
+      "spo2_variability": 1.39
+    },
+    "night_number": 2,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 92.6,
+      "min_spo2": 72.8,
+      "std_spo2": 1.38,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "7e11a59d",
+    "baby": {
+      "baby_id": "dc326bce",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1749,
+      "days_since_birth": 86,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 92.8,
+      "spo2_variability": 1.39
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 92.8,
+      "min_spo2": 90.1,
+      "std_spo2": 0.48,
+      "n_events": 9
+    }
+  },
+  {
+    "night_id": "9cee69c2",
+    "baby": {
+      "baby_id": "54b8a2d9",
+      "gestational_age_weeks": 33,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2303,
+      "days_since_birth": 79,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.1,
+      "spo2_variability": 1.19
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.8,
+    "stats": {
+      "mean_spo2": 94.1,
+      "min_spo2": 54.0,
+      "std_spo2": 0.61,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "850bd2f7",
+    "baby": {
+      "baby_id": "54b8a2d9",
+      "gestational_age_weeks": 33,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2303,
+      "days_since_birth": 79,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.1,
+      "spo2_variability": 1.19
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.939,
+    "stats": {
+      "mean_spo2": 94.1,
+      "min_spo2": 92.1,
+      "std_spo2": 0.46,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "8e2749c8",
+    "baby": {
+      "baby_id": "54b8a2d9",
+      "gestational_age_weeks": 33,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2303,
+      "days_since_birth": 79,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.1,
+      "spo2_variability": 1.19
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.992,
+    "stats": {
+      "mean_spo2": 94.1,
+      "min_spo2": 90.2,
+      "std_spo2": 0.4,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "816e0ceb",
+    "baby": {
+      "baby_id": "766d2859",
+      "gestational_age_weeks": 39,
+      "ga_category": "term",
+      "birth_weight_grams": 3501,
+      "days_since_birth": 40,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.3,
+      "spo2_variability": 1.22
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.3,
+      "min_spo2": 96.8,
+      "std_spo2": 0.47,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "a6deadc8",
+    "baby": {
+      "baby_id": "766d2859",
+      "gestational_age_weeks": 39,
+      "ga_category": "term",
+      "birth_weight_grams": 3501,
+      "days_since_birth": 40,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.3,
+      "spo2_variability": 1.22
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.3,
+      "min_spo2": 96.3,
+      "std_spo2": 0.41,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "5711d82b",
+    "baby": {
+      "baby_id": "766d2859",
+      "gestational_age_weeks": 39,
+      "ga_category": "term",
+      "birth_weight_grams": 3501,
+      "days_since_birth": 40,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.3,
+      "spo2_variability": 1.22
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.2,
+      "min_spo2": 74.2,
+      "std_spo2": 1.74,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "2efc494e",
+    "baby": {
+      "baby_id": "1c35507b",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 508,
+      "days_since_birth": 61,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 90.2,
+      "spo2_variability": 1.63
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.2,
+      "min_spo2": 88.8,
+      "std_spo2": 0.43,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "09f58ace",
+    "baby": {
+      "baby_id": "1c35507b",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 508,
+      "days_since_birth": 61,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 90.2,
+      "spo2_variability": 1.63
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.2,
+      "min_spo2": 88.5,
+      "std_spo2": 0.39,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "8f51c0fb",
+    "baby": {
+      "baby_id": "1c35507b",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 508,
+      "days_since_birth": 61,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 90.2,
+      "spo2_variability": 1.63
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.2,
+      "min_spo2": 88.6,
+      "std_spo2": 0.31,
+      "n_events": 9
+    }
+  },
+  {
+    "night_id": "fbe131fa",
+    "baby": {
+      "baby_id": "f311d12a",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 902,
+      "days_since_birth": 3,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 90.5,
+      "spo2_variability": 1.9
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.95,
+    "stats": {
+      "mean_spo2": 90.5,
+      "min_spo2": 47.7,
+      "std_spo2": 0.87,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "469427b7",
+    "baby": {
+      "baby_id": "f311d12a",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 902,
+      "days_since_birth": 3,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 90.5,
+      "spo2_variability": 1.9
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 90.5,
+      "min_spo2": 88.6,
+      "std_spo2": 0.42,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "e3268d02",
+    "baby": {
+      "baby_id": "f311d12a",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 902,
+      "days_since_birth": 3,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 90.5,
+      "spo2_variability": 1.9
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 90.4,
+      "min_spo2": 78.1,
+      "std_spo2": 0.98,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "f9e21678",
+    "baby": {
+      "baby_id": "39af41f0",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2155,
+      "days_since_birth": 60,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.8,
+      "spo2_variability": 0.79
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 94.8,
+      "min_spo2": 47.9,
+      "std_spo2": 0.78,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "a496aa11",
+    "baby": {
+      "baby_id": "39af41f0",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2155,
+      "days_since_birth": 60,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.8,
+      "spo2_variability": 0.79
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 94.8,
+      "min_spo2": 91.0,
+      "std_spo2": 0.35,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "d500fa45",
+    "baby": {
+      "baby_id": "39af41f0",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2155,
+      "days_since_birth": 60,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.8,
+      "spo2_variability": 0.79
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 94.8,
+      "min_spo2": 44.7,
+      "std_spo2": 0.94,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "a77e6aca",
+    "baby": {
+      "baby_id": "08923ce1",
+      "gestational_age_weeks": 26,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 777,
+      "days_since_birth": 14,
+      "known_conditions": [
+        "apnea_of_prematurity",
+        "bpd"
+      ],
+      "spo2_baseline": 91.2,
+      "spo2_variability": 2.76
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 91.0,
+      "min_spo2": 63.4,
+      "std_spo2": 1.39,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "c3467a92",
+    "baby": {
+      "baby_id": "08923ce1",
+      "gestational_age_weeks": 26,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 777,
+      "days_since_birth": 14,
+      "known_conditions": [
+        "apnea_of_prematurity",
+        "bpd"
+      ],
+      "spo2_baseline": 91.2,
+      "spo2_variability": 2.76
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 91.2,
+      "min_spo2": 89.8,
+      "std_spo2": 0.45,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "fe07f0ad",
+    "baby": {
+      "baby_id": "08923ce1",
+      "gestational_age_weeks": 26,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 777,
+      "days_since_birth": 14,
+      "known_conditions": [
+        "apnea_of_prematurity",
+        "bpd"
+      ],
+      "spo2_baseline": 91.2,
+      "spo2_variability": 2.76
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 91.2,
+      "min_spo2": 89.7,
+      "std_spo2": 0.48,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "9c8ae2be",
+    "baby": {
+      "baby_id": "2d569387",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1927,
+      "days_since_birth": 84,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.5,
+      "spo2_variability": 0.82
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 93.5,
+      "min_spo2": 89.9,
+      "std_spo2": 0.4,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "4074f835",
+    "baby": {
+      "baby_id": "2d569387",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1927,
+      "days_since_birth": 84,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.5,
+      "spo2_variability": 0.82
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.958,
+    "stats": {
+      "mean_spo2": 93.5,
+      "min_spo2": 91.6,
+      "std_spo2": 0.39,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "c95c01a4",
+    "baby": {
+      "baby_id": "2d569387",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1927,
+      "days_since_birth": 84,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.5,
+      "spo2_variability": 0.82
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.988,
+    "stats": {
+      "mean_spo2": 93.5,
+      "min_spo2": 90.1,
+      "std_spo2": 0.45,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "09ff3263",
+    "baby": {
+      "baby_id": "36cda949",
+      "gestational_age_weeks": 26,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 554,
+      "days_since_birth": 26,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.8,
+      "spo2_variability": 1.68
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.8,
+      "min_spo2": 88.9,
+      "std_spo2": 0.37,
+      "n_events": 9
+    }
+  },
+  {
+    "night_id": "9d95b796",
+    "baby": {
+      "baby_id": "36cda949",
+      "gestational_age_weeks": 26,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 554,
+      "days_since_birth": 26,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.8,
+      "spo2_variability": 1.68
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.8,
+      "min_spo2": 89.5,
+      "std_spo2": 0.41,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "a4ed9fa6",
+    "baby": {
+      "baby_id": "36cda949",
+      "gestational_age_weeks": 26,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 554,
+      "days_since_birth": 26,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.8,
+      "spo2_variability": 1.68
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.8,
+      "min_spo2": 56.6,
+      "std_spo2": 0.6,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "4d4329d3",
+    "baby": {
+      "baby_id": "934211ba",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 4006,
+      "days_since_birth": 55,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.5,
+      "spo2_variability": 0.54
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.5,
+      "min_spo2": 95.5,
+      "std_spo2": 0.46,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "7df71613",
+    "baby": {
+      "baby_id": "934211ba",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 4006,
+      "days_since_birth": 55,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.5,
+      "spo2_variability": 0.54
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.5,
+      "min_spo2": 96.0,
+      "std_spo2": 0.48,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "517a29ae",
+    "baby": {
+      "baby_id": "934211ba",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 4006,
+      "days_since_birth": 55,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.5,
+      "spo2_variability": 0.54
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 97.5,
+      "min_spo2": 92.0,
+      "std_spo2": 0.48,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "d7875701",
+    "baby": {
+      "baby_id": "9137a853",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2407,
+      "days_since_birth": 25,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.7,
+      "spo2_variability": 0.67
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 93.7,
+      "min_spo2": 47.2,
+      "std_spo2": 0.94,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "d4d82667",
+    "baby": {
+      "baby_id": "9137a853",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2407,
+      "days_since_birth": 25,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.7,
+      "spo2_variability": 0.67
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "expert_review",
+    "confidence": 0.89,
+    "stats": {
+      "mean_spo2": 93.7,
+      "min_spo2": 90.0,
+      "std_spo2": 0.5,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "4d4f9259",
+    "baby": {
+      "baby_id": "9137a853",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2407,
+      "days_since_birth": 25,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.7,
+      "spo2_variability": 0.67
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "expert_review",
+    "confidence": 0.88,
+    "stats": {
+      "mean_spo2": 93.7,
+      "min_spo2": 90.2,
+      "std_spo2": 0.35,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "ec7016a2",
+    "baby": {
+      "baby_id": "47c28418",
+      "gestational_age_weeks": 39,
+      "ga_category": "term",
+      "birth_weight_grams": 4418,
+      "days_since_birth": 10,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.8,
+      "spo2_variability": 0.69
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.8,
+      "min_spo2": 94.5,
+      "std_spo2": 0.45,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "70b7debb",
+    "baby": {
+      "baby_id": "47c28418",
+      "gestational_age_weeks": 39,
+      "ga_category": "term",
+      "birth_weight_grams": 4418,
+      "days_since_birth": 10,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.8,
+      "spo2_variability": 0.69
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.8,
+      "min_spo2": 94.9,
+      "std_spo2": 0.38,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "b0eb5169",
+    "baby": {
+      "baby_id": "47c28418",
+      "gestational_age_weeks": 39,
+      "ga_category": "term",
+      "birth_weight_grams": 4418,
+      "days_since_birth": 10,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.8,
+      "spo2_variability": 0.69
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.95,
+    "stats": {
+      "mean_spo2": 96.8,
+      "min_spo2": 48.3,
+      "std_spo2": 1.02,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "b53a8504",
+    "baby": {
+      "baby_id": "deb2d753",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 912,
+      "days_since_birth": 29,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 91.4,
+      "spo2_variability": 1.89
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 91.4,
+      "min_spo2": 51.2,
+      "std_spo2": 0.77,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "dbb67fd7",
+    "baby": {
+      "baby_id": "deb2d753",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 912,
+      "days_since_birth": 29,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 91.4,
+      "spo2_variability": 1.89
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.4,
+      "min_spo2": 89.6,
+      "std_spo2": 0.36,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "e79b0e38",
+    "baby": {
+      "baby_id": "deb2d753",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 912,
+      "days_since_birth": 29,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 91.4,
+      "spo2_variability": 1.89
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 91.2,
+      "min_spo2": 72.9,
+      "std_spo2": 1.44,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "29041e05",
+    "baby": {
+      "baby_id": "185aa9e6",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 727,
+      "days_since_birth": 11,
+      "known_conditions": [
+        "apnea_of_prematurity",
+        "bpd"
+      ],
+      "spo2_baseline": 91.2,
+      "spo2_variability": 1.83
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.2,
+      "min_spo2": 89.2,
+      "std_spo2": 0.42,
+      "n_events": 10
+    }
+  },
+  {
+    "night_id": "b10a27c7",
+    "baby": {
+      "baby_id": "185aa9e6",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 727,
+      "days_since_birth": 11,
+      "known_conditions": [
+        "apnea_of_prematurity",
+        "bpd"
+      ],
+      "spo2_baseline": 91.2,
+      "spo2_variability": 1.83
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 91.2,
+      "min_spo2": 44.6,
+      "std_spo2": 0.76,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "cea5207e",
+    "baby": {
+      "baby_id": "185aa9e6",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 727,
+      "days_since_birth": 11,
+      "known_conditions": [
+        "apnea_of_prematurity",
+        "bpd"
+      ],
+      "spo2_baseline": 91.2,
+      "spo2_variability": 1.83
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.2,
+      "min_spo2": 88.6,
+      "std_spo2": 0.43,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "4427523c",
+    "baby": {
+      "baby_id": "cafa7da6",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2276,
+      "days_since_birth": 73,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.1,
+      "spo2_variability": 1.0
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 95.1,
+      "min_spo2": 63.2,
+      "std_spo2": 0.53,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "38282270",
+    "baby": {
+      "baby_id": "cafa7da6",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2276,
+      "days_since_birth": 73,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.1,
+      "spo2_variability": 1.0
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 95.1,
+      "min_spo2": 90.3,
+      "std_spo2": 0.44,
+      "n_events": 9
+    }
+  },
+  {
+    "night_id": "9b55a01d",
+    "baby": {
+      "baby_id": "cafa7da6",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2276,
+      "days_since_birth": 73,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.1,
+      "spo2_variability": 1.0
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "expert_review",
+    "confidence": 0.86,
+    "stats": {
+      "mean_spo2": 95.1,
+      "min_spo2": 93.5,
+      "std_spo2": 0.4,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "ca50c3b4",
+    "baby": {
+      "baby_id": "526965a4",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 3573,
+      "days_since_birth": 4,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.9,
+      "spo2_variability": 1.43
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.9,
+      "min_spo2": 95.9,
+      "std_spo2": 0.33,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "8141e4a7",
+    "baby": {
+      "baby_id": "526965a4",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 3573,
+      "days_since_birth": 4,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.9,
+      "spo2_variability": 1.43
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.9,
+      "min_spo2": 96.4,
+      "std_spo2": 0.44,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "2190f739",
+    "baby": {
+      "baby_id": "526965a4",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 3573,
+      "days_since_birth": 4,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.9,
+      "spo2_variability": 1.43
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.9,
+      "min_spo2": 96.7,
+      "std_spo2": 0.36,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "bc6161f6",
+    "baby": {
+      "baby_id": "b52e6f50",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2091,
+      "days_since_birth": 26,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.3,
+      "spo2_variability": 0.67
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.993,
+    "stats": {
+      "mean_spo2": 95.3,
+      "min_spo2": 93.3,
+      "std_spo2": 0.41,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "3d0425f1",
+    "baby": {
+      "baby_id": "b52e6f50",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2091,
+      "days_since_birth": 26,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.3,
+      "spo2_variability": 0.67
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 95.3,
+      "min_spo2": 90.9,
+      "std_spo2": 0.48,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "dcad7133",
+    "baby": {
+      "baby_id": "b52e6f50",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2091,
+      "days_since_birth": 26,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.3,
+      "spo2_variability": 0.67
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 95.3,
+      "min_spo2": 52.4,
+      "std_spo2": 0.9,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "337dffa1",
+    "baby": {
+      "baby_id": "f652e245",
+      "gestational_age_weeks": 37,
+      "ga_category": "term",
+      "birth_weight_grams": 2713,
+      "days_since_birth": 5,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.5,
+      "spo2_variability": 0.3
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 98.5,
+      "min_spo2": 91.1,
+      "std_spo2": 0.62,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "96cd0550",
+    "baby": {
+      "baby_id": "f652e245",
+      "gestational_age_weeks": 37,
+      "ga_category": "term",
+      "birth_weight_grams": 2713,
+      "days_since_birth": 5,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.5,
+      "spo2_variability": 0.3
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.8,
+    "stats": {
+      "mean_spo2": 98.4,
+      "min_spo2": 90.8,
+      "std_spo2": 0.67,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "0fb39dbc",
+    "baby": {
+      "baby_id": "f652e245",
+      "gestational_age_weeks": 37,
+      "ga_category": "term",
+      "birth_weight_grams": 2713,
+      "days_since_birth": 5,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.5,
+      "spo2_variability": 0.3
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.5,
+      "min_spo2": 96.9,
+      "std_spo2": 0.4,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "39ef9a4f",
+    "baby": {
+      "baby_id": "bf65f29d",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 4305,
+      "days_since_birth": 22,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.5,
+      "spo2_variability": 0.88
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.5,
+      "min_spo2": 95.5,
+      "std_spo2": 0.44,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "dddb3727",
+    "baby": {
+      "baby_id": "bf65f29d",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 4305,
+      "days_since_birth": 22,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.5,
+      "spo2_variability": 0.88
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.5,
+      "min_spo2": 95.6,
+      "std_spo2": 0.39,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "82d0ce58",
+    "baby": {
+      "baby_id": "bf65f29d",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 4305,
+      "days_since_birth": 22,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.5,
+      "spo2_variability": 0.88
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.5,
+      "min_spo2": 96.2,
+      "std_spo2": 0.43,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "1d561762",
+    "baby": {
+      "baby_id": "ca898480",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2231,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.7,
+      "spo2_variability": 1.05
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 94.7,
+      "min_spo2": 52.7,
+      "std_spo2": 0.6,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "c46e0a25",
+    "baby": {
+      "baby_id": "ca898480",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2231,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.7,
+      "spo2_variability": 1.05
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.7,
+    "stats": {
+      "mean_spo2": 94.7,
+      "min_spo2": 90.4,
+      "std_spo2": 0.43,
+      "n_events": 10
+    }
+  },
+  {
+    "night_id": "92d5f687",
+    "baby": {
+      "baby_id": "ca898480",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2231,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.7,
+      "spo2_variability": 1.05
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.823,
+    "stats": {
+      "mean_spo2": 94.7,
+      "min_spo2": 93.6,
+      "std_spo2": 0.32,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "e96ee4b9",
+    "baby": {
+      "baby_id": "de6b4530",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 3425,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.2,
+      "spo2_variability": 0.89
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.2,
+      "min_spo2": 96.3,
+      "std_spo2": 0.31,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "0ec42477",
+    "baby": {
+      "baby_id": "de6b4530",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 3425,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.2,
+      "spo2_variability": 0.89
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.2,
+      "min_spo2": 96.7,
+      "std_spo2": 0.42,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "06dc9ceb",
+    "baby": {
+      "baby_id": "de6b4530",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 3425,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.2,
+      "spo2_variability": 0.89
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.2,
+      "min_spo2": 96.5,
+      "std_spo2": 0.31,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "a615030d",
+    "baby": {
+      "baby_id": "6f7f3147",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 716,
+      "days_since_birth": 44,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 89.5,
+      "spo2_variability": 2.26
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 89.3,
+      "min_spo2": 72.7,
+      "std_spo2": 1.4,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "f8d0b19f",
+    "baby": {
+      "baby_id": "6f7f3147",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 716,
+      "days_since_birth": 44,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 89.5,
+      "spo2_variability": 2.26
+    },
+    "night_number": 2,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 89.3,
+      "min_spo2": 63.8,
+      "std_spo2": 1.63,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "00bcb8e4",
+    "baby": {
+      "baby_id": "6f7f3147",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 716,
+      "days_since_birth": 44,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 89.5,
+      "spo2_variability": 2.26
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 89.5,
+      "min_spo2": 87.4,
+      "std_spo2": 0.33,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "6e9d111c",
+    "baby": {
+      "baby_id": "403a3184",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1303,
+      "days_since_birth": 17,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.6,
+      "spo2_variability": 2.02
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 93.6,
+      "min_spo2": 90.6,
+      "std_spo2": 0.46,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "23511f6b",
+    "baby": {
+      "baby_id": "403a3184",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1303,
+      "days_since_birth": 17,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.6,
+      "spo2_variability": 2.02
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.947,
+    "stats": {
+      "mean_spo2": 93.6,
+      "min_spo2": 90.4,
+      "std_spo2": 0.43,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "6694565f",
+    "baby": {
+      "baby_id": "403a3184",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1303,
+      "days_since_birth": 17,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.6,
+      "spo2_variability": 2.02
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.947,
+    "stats": {
+      "mean_spo2": 93.6,
+      "min_spo2": 90.8,
+      "std_spo2": 0.35,
+      "n_events": 9
+    }
+  },
+  {
+    "night_id": "93d179dd",
+    "baby": {
+      "baby_id": "25466531",
+      "gestational_age_weeks": 30,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1368,
+      "days_since_birth": 49,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.8,
+      "spo2_variability": 1.41
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 93.7,
+      "min_spo2": 73.1,
+      "std_spo2": 1.53,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "5dd6a4c3",
+    "baby": {
+      "baby_id": "25466531",
+      "gestational_age_weeks": 30,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1368,
+      "days_since_birth": 49,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.8,
+      "spo2_variability": 1.41
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.7,
+    "stats": {
+      "mean_spo2": 93.8,
+      "min_spo2": 89.7,
+      "std_spo2": 0.48,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "fc1c8793",
+    "baby": {
+      "baby_id": "25466531",
+      "gestational_age_weeks": 30,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1368,
+      "days_since_birth": 49,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.8,
+      "spo2_variability": 1.41
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 93.6,
+      "min_spo2": 76.2,
+      "std_spo2": 1.48,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "7c0f9367",
+    "baby": {
+      "baby_id": "d00b545a",
+      "gestational_age_weeks": 32,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2001,
+      "days_since_birth": 16,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.8,
+      "spo2_variability": 0.94
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.985,
+    "stats": {
+      "mean_spo2": 95.8,
+      "min_spo2": 94.4,
+      "std_spo2": 0.45,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "524ce58f",
+    "baby": {
+      "baby_id": "d00b545a",
+      "gestational_age_weeks": 32,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2001,
+      "days_since_birth": 16,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.8,
+      "spo2_variability": 0.94
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 95.8,
+      "min_spo2": 90.9,
+      "std_spo2": 0.5,
+      "n_events": 10
+    }
+  },
+  {
+    "night_id": "349ce808",
+    "baby": {
+      "baby_id": "d00b545a",
+      "gestational_age_weeks": 32,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2001,
+      "days_since_birth": 16,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.8,
+      "spo2_variability": 0.94
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 95.8,
+      "min_spo2": 70.1,
+      "std_spo2": 0.51,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "96a41ebc",
+    "baby": {
+      "baby_id": "29883c11",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2245,
+      "days_since_birth": 9,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.7,
+      "spo2_variability": 0.53
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.998,
+    "stats": {
+      "mean_spo2": 95.7,
+      "min_spo2": 94.0,
+      "std_spo2": 0.43,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "b870bfb9",
+    "baby": {
+      "baby_id": "29883c11",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2245,
+      "days_since_birth": 9,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.7,
+      "spo2_variability": 0.53
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.967,
+    "stats": {
+      "mean_spo2": 95.7,
+      "min_spo2": 91.8,
+      "std_spo2": 0.47,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "9aae5134",
+    "baby": {
+      "baby_id": "29883c11",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2245,
+      "days_since_birth": 9,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.7,
+      "spo2_variability": 0.53
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 95.7,
+      "min_spo2": 46.5,
+      "std_spo2": 0.98,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "38c0cf3c",
+    "baby": {
+      "baby_id": "1df0869e",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 979,
+      "days_since_birth": 16,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.3,
+      "spo2_variability": 1.7
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 90.3,
+      "min_spo2": 60.0,
+      "std_spo2": 0.65,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "02a39aca",
+    "baby": {
+      "baby_id": "1df0869e",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 979,
+      "days_since_birth": 16,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.3,
+      "spo2_variability": 1.7
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.8,
+    "stats": {
+      "mean_spo2": 90.3,
+      "min_spo2": 41.4,
+      "std_spo2": 0.83,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "a357bee5",
+    "baby": {
+      "baby_id": "1df0869e",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 979,
+      "days_since_birth": 16,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.3,
+      "spo2_variability": 1.7
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.3,
+      "min_spo2": 88.4,
+      "std_spo2": 0.41,
+      "n_events": 10
+    }
+  },
+  {
+    "night_id": "d20243a6",
+    "baby": {
+      "baby_id": "10d47fa7",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1577,
+      "days_since_birth": 54,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 92.3,
+      "spo2_variability": 1.85
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.995,
+    "stats": {
+      "mean_spo2": 92.3,
+      "min_spo2": 90.4,
+      "std_spo2": 0.46,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "0bc359d3",
+    "baby": {
+      "baby_id": "10d47fa7",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1577,
+      "days_since_birth": 54,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 92.3,
+      "spo2_variability": 1.85
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.993,
+    "stats": {
+      "mean_spo2": 92.3,
+      "min_spo2": 90.7,
+      "std_spo2": 0.48,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "5def2c7f",
+    "baby": {
+      "baby_id": "10d47fa7",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1577,
+      "days_since_birth": 54,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 92.3,
+      "spo2_variability": 1.85
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.997,
+    "stats": {
+      "mean_spo2": 92.3,
+      "min_spo2": 90.2,
+      "std_spo2": 0.5,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "d2a4bf48",
+    "baby": {
+      "baby_id": "02963218",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2126,
+      "days_since_birth": 62,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.4,
+      "spo2_variability": 1.48
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "expert_review",
+    "confidence": 0.93,
+    "stats": {
+      "mean_spo2": 95.4,
+      "min_spo2": 92.9,
+      "std_spo2": 0.34,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "024a3372",
+    "baby": {
+      "baby_id": "02963218",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2126,
+      "days_since_birth": 62,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.4,
+      "spo2_variability": 1.48
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.7,
+    "stats": {
+      "mean_spo2": 95.4,
+      "min_spo2": 90.4,
+      "std_spo2": 0.55,
+      "n_events": 9
+    }
+  },
+  {
+    "night_id": "eeedb9d6",
+    "baby": {
+      "baby_id": "02963218",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2126,
+      "days_since_birth": 62,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.4,
+      "spo2_variability": 1.48
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 95.2,
+      "min_spo2": 73.2,
+      "std_spo2": 1.65,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "f404c717",
+    "baby": {
+      "baby_id": "4907a0bf",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1897,
+      "days_since_birth": 84,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.4,
+      "spo2_variability": 1.44
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.978,
+    "stats": {
+      "mean_spo2": 93.4,
+      "min_spo2": 91.4,
+      "std_spo2": 0.39,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "957805d8",
+    "baby": {
+      "baby_id": "4907a0bf",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1897,
+      "days_since_birth": 84,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.4,
+      "spo2_variability": 1.44
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.95,
+    "stats": {
+      "mean_spo2": 93.4,
+      "min_spo2": 49.6,
+      "std_spo2": 0.95,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "01bb61c2",
+    "baby": {
+      "baby_id": "4907a0bf",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1897,
+      "days_since_birth": 84,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.4,
+      "spo2_variability": 1.44
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 93.2,
+      "min_spo2": 72.1,
+      "std_spo2": 1.94,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "143ef388",
+    "baby": {
+      "baby_id": "620312a6",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2093,
+      "days_since_birth": 83,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.1,
+      "spo2_variability": 1.07
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 95.9,
+      "min_spo2": 71.9,
+      "std_spo2": 1.58,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "02fcd55c",
+    "baby": {
+      "baby_id": "620312a6",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2093,
+      "days_since_birth": 83,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.1,
+      "spo2_variability": 1.07
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 96.1,
+      "min_spo2": 46.0,
+      "std_spo2": 1.09,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "a7b0d8b8",
+    "baby": {
+      "baby_id": "620312a6",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2093,
+      "days_since_birth": 83,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.1,
+      "spo2_variability": 1.07
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.1,
+      "min_spo2": 62.9,
+      "std_spo2": 0.48,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "59d8feec",
+    "baby": {
+      "baby_id": "8c2dca36",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 3768,
+      "days_since_birth": 25,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 0.76
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 96.0,
+      "std_spo2": 0.36,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "bec5f7fb",
+    "baby": {
+      "baby_id": "8c2dca36",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 3768,
+      "days_since_birth": 25,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 0.76
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 94.2,
+      "std_spo2": 0.41,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "265691c4",
+    "baby": {
+      "baby_id": "8c2dca36",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 3768,
+      "days_since_birth": 25,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 0.76
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.95,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 54.6,
+      "std_spo2": 0.97,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "0b8d4e5a",
+    "baby": {
+      "baby_id": "07e5c72a",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 573,
+      "days_since_birth": 8,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.5,
+      "spo2_variability": 1.78
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 92.3,
+      "min_spo2": 75.4,
+      "std_spo2": 1.34,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "c68dd6f8",
+    "baby": {
+      "baby_id": "07e5c72a",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 573,
+      "days_since_birth": 8,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.5,
+      "spo2_variability": 1.78
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.985,
+    "stats": {
+      "mean_spo2": 92.5,
+      "min_spo2": 91.0,
+      "std_spo2": 0.49,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "003c6078",
+    "baby": {
+      "baby_id": "07e5c72a",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 573,
+      "days_since_birth": 8,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.5,
+      "spo2_variability": 1.78
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.988,
+    "stats": {
+      "mean_spo2": 92.5,
+      "min_spo2": 91.0,
+      "std_spo2": 0.46,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "49471ea8",
+    "baby": {
+      "baby_id": "b89b7b64",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 3221,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.8,
+      "spo2_variability": 0.8
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.8,
+      "min_spo2": 96.8,
+      "std_spo2": 0.41,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "3f168c6d",
+    "baby": {
+      "baby_id": "b89b7b64",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 3221,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.8,
+      "spo2_variability": 0.8
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.8,
+      "min_spo2": 97.5,
+      "std_spo2": 0.42,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "912ffc5e",
+    "baby": {
+      "baby_id": "b89b7b64",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 3221,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.8,
+      "spo2_variability": 0.8
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 98.8,
+      "min_spo2": 49.6,
+      "std_spo2": 0.82,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "77467aec",
+    "baby": {
+      "baby_id": "c4318c88",
+      "gestational_age_weeks": 37,
+      "ga_category": "term",
+      "birth_weight_grams": 3935,
+      "days_since_birth": 77,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.6,
+      "spo2_variability": 1.5
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.6,
+      "min_spo2": 97.1,
+      "std_spo2": 0.49,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "ca8300ef",
+    "baby": {
+      "baby_id": "c4318c88",
+      "gestational_age_weeks": 37,
+      "ga_category": "term",
+      "birth_weight_grams": 3935,
+      "days_since_birth": 77,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.6,
+      "spo2_variability": 1.5
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 98.6,
+      "min_spo2": 53.8,
+      "std_spo2": 0.58,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "d3cbd6ea",
+    "baby": {
+      "baby_id": "c4318c88",
+      "gestational_age_weeks": 37,
+      "ga_category": "term",
+      "birth_weight_grams": 3935,
+      "days_since_birth": 77,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.6,
+      "spo2_variability": 1.5
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.6,
+      "min_spo2": 97.4,
+      "std_spo2": 0.34,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "3f11e734",
+    "baby": {
+      "baby_id": "e83962b2",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1885,
+      "days_since_birth": 11,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.5,
+      "spo2_variability": 1.03
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 94.5,
+      "min_spo2": 90.6,
+      "std_spo2": 0.45,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "6f3a03b5",
+    "baby": {
+      "baby_id": "e83962b2",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1885,
+      "days_since_birth": 11,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.5,
+      "spo2_variability": 1.03
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.962,
+    "stats": {
+      "mean_spo2": 94.5,
+      "min_spo2": 91.3,
+      "std_spo2": 0.38,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "53db10c5",
+    "baby": {
+      "baby_id": "e83962b2",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1885,
+      "days_since_birth": 11,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.5,
+      "spo2_variability": 1.03
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 94.5,
+      "min_spo2": 65.6,
+      "std_spo2": 0.51,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "0486fdd6",
+    "baby": {
+      "baby_id": "42a56792",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2377,
+      "days_since_birth": 39,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.2,
+      "spo2_variability": 1.13
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 94.2,
+      "min_spo2": 55.3,
+      "std_spo2": 0.84,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "0c238d70",
+    "baby": {
+      "baby_id": "42a56792",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2377,
+      "days_since_birth": 39,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.2,
+      "spo2_variability": 1.13
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.998,
+    "stats": {
+      "mean_spo2": 94.2,
+      "min_spo2": 89.9,
+      "std_spo2": 0.39,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "ef882f30",
+    "baby": {
+      "baby_id": "42a56792",
+      "gestational_age_weeks": 35,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2377,
+      "days_since_birth": 39,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.2,
+      "spo2_variability": 1.13
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 93.9,
+      "min_spo2": 71.5,
+      "std_spo2": 2.46,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "8a381e13",
+    "baby": {
+      "baby_id": "8164b181",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 3976,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.6,
+      "spo2_variability": 0.3
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.6,
+      "min_spo2": 94.6,
+      "std_spo2": 0.36,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "915d5db7",
+    "baby": {
+      "baby_id": "8164b181",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 3976,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.6,
+      "spo2_variability": 0.3
+    },
+    "night_number": 2,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.3,
+      "min_spo2": 73.9,
+      "std_spo2": 2.35,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "ba7c424b",
+    "baby": {
+      "baby_id": "8164b181",
+      "gestational_age_weeks": 38,
+      "ga_category": "term",
+      "birth_weight_grams": 3976,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.6,
+      "spo2_variability": 0.3
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 96.5,
+      "min_spo2": 90.3,
+      "std_spo2": 0.54,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "1f70d378",
+    "baby": {
+      "baby_id": "d9312cfd",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 3067,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.7,
+      "spo2_variability": 0.84
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 98.7,
+      "min_spo2": 90.2,
+      "std_spo2": 0.55,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "035fb051",
+    "baby": {
+      "baby_id": "d9312cfd",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 3067,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.7,
+      "spo2_variability": 0.84
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.7,
+      "min_spo2": 96.5,
+      "std_spo2": 0.46,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "cb94381c",
+    "baby": {
+      "baby_id": "d9312cfd",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 3067,
+      "days_since_birth": 71,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.7,
+      "spo2_variability": 0.84
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.7,
+      "min_spo2": 97.4,
+      "std_spo2": 0.4,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "6ae8f495",
+    "baby": {
+      "baby_id": "f839fca5",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 840,
+      "days_since_birth": 81,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 90.8,
+      "spo2_variability": 2.06
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.8,
+      "min_spo2": 88.0,
+      "std_spo2": 0.49,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "0a2d8bad",
+    "baby": {
+      "baby_id": "f839fca5",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 840,
+      "days_since_birth": 81,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 90.8,
+      "spo2_variability": 2.06
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.8,
+      "min_spo2": 89.0,
+      "std_spo2": 0.35,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "ee5c4b81",
+    "baby": {
+      "baby_id": "f839fca5",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 840,
+      "days_since_birth": 81,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 90.8,
+      "spo2_variability": 2.06
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.8,
+      "min_spo2": 88.9,
+      "std_spo2": 0.47,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "20b286e2",
+    "baby": {
+      "baby_id": "3dc532c4",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 955,
+      "days_since_birth": 27,
+      "known_conditions": [
+        "apnea_of_prematurity",
+        "bpd"
+      ],
+      "spo2_baseline": 91.8,
+      "spo2_variability": 1.4
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.8,
+      "min_spo2": 90.0,
+      "std_spo2": 0.39,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "4ef58d87",
+    "baby": {
+      "baby_id": "3dc532c4",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 955,
+      "days_since_birth": 27,
+      "known_conditions": [
+        "apnea_of_prematurity",
+        "bpd"
+      ],
+      "spo2_baseline": 91.8,
+      "spo2_variability": 1.4
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.8,
+      "min_spo2": 90.5,
+      "std_spo2": 0.29,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "40e2fb06",
+    "baby": {
+      "baby_id": "3dc532c4",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 955,
+      "days_since_birth": 27,
+      "known_conditions": [
+        "apnea_of_prematurity",
+        "bpd"
+      ],
+      "spo2_baseline": 91.8,
+      "spo2_variability": 1.4
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.8,
+      "min_spo2": 89.7,
+      "std_spo2": 0.46,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "ffaaac63",
+    "baby": {
+      "baby_id": "9654c179",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 4426,
+      "days_since_birth": 22,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.7,
+      "spo2_variability": 0.6
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 95.6,
+      "min_spo2": 74.6,
+      "std_spo2": 1.38,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "da18b247",
+    "baby": {
+      "baby_id": "9654c179",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 4426,
+      "days_since_birth": 22,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.7,
+      "spo2_variability": 0.6
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 95.7,
+      "min_spo2": 94.3,
+      "std_spo2": 0.41,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "aa905c0e",
+    "baby": {
+      "baby_id": "9654c179",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 4426,
+      "days_since_birth": 22,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.7,
+      "spo2_variability": 0.6
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 95.7,
+      "min_spo2": 92.9,
+      "std_spo2": 0.42,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "271dc019",
+    "baby": {
+      "baby_id": "5aa94db2",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 4355,
+      "days_since_birth": 11,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 99.1,
+      "spo2_variability": 1.2
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 99.1,
+      "min_spo2": 97.0,
+      "std_spo2": 0.46,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "4b620cb1",
+    "baby": {
+      "baby_id": "5aa94db2",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 4355,
+      "days_since_birth": 11,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 99.1,
+      "spo2_variability": 1.2
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 99.1,
+      "min_spo2": 55.0,
+      "std_spo2": 0.73,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "751f1c27",
+    "baby": {
+      "baby_id": "5aa94db2",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 4355,
+      "days_since_birth": 11,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 99.1,
+      "spo2_variability": 1.2
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 99.1,
+      "min_spo2": 48.7,
+      "std_spo2": 0.88,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "25dfd771",
+    "baby": {
+      "baby_id": "9e5598d4",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 728,
+      "days_since_birth": 19,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 92.4,
+      "spo2_variability": 2.03
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.997,
+    "stats": {
+      "mean_spo2": 92.4,
+      "min_spo2": 90.2,
+      "std_spo2": 0.39,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "de34ce3e",
+    "baby": {
+      "baby_id": "9e5598d4",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 728,
+      "days_since_birth": 19,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 92.4,
+      "spo2_variability": 2.03
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.998,
+    "stats": {
+      "mean_spo2": 92.4,
+      "min_spo2": 90.0,
+      "std_spo2": 0.47,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "136636e4",
+    "baby": {
+      "baby_id": "9e5598d4",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 728,
+      "days_since_birth": 19,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 92.4,
+      "spo2_variability": 2.03
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.996,
+    "stats": {
+      "mean_spo2": 92.4,
+      "min_spo2": 90.0,
+      "std_spo2": 0.49,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "4e1f76ab",
+    "baby": {
+      "baby_id": "8055b7db",
+      "gestational_age_weeks": 39,
+      "ga_category": "term",
+      "birth_weight_grams": 2810,
+      "days_since_birth": 74,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 0.69
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 95.8,
+      "std_spo2": 0.37,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "240b7625",
+    "baby": {
+      "baby_id": "8055b7db",
+      "gestational_age_weeks": 39,
+      "ga_category": "term",
+      "birth_weight_grams": 2810,
+      "days_since_birth": 74,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 0.69
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.65,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 90.8,
+      "std_spo2": 0.39,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "8abd474d",
+    "baby": {
+      "baby_id": "8055b7db",
+      "gestational_age_weeks": 39,
+      "ga_category": "term",
+      "birth_weight_grams": 2810,
+      "days_since_birth": 74,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 0.69
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 48.4,
+      "std_spo2": 1.01,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "a04d1ffa",
+    "baby": {
+      "baby_id": "4a5f216a",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 3545,
+      "days_since_birth": 89,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.6,
+      "spo2_variability": 0.92
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.8,
+    "stats": {
+      "mean_spo2": 96.6,
+      "min_spo2": 61.6,
+      "std_spo2": 0.64,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "69e80ee6",
+    "baby": {
+      "baby_id": "4a5f216a",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 3545,
+      "days_since_birth": 89,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.6,
+      "spo2_variability": 0.92
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.6,
+      "min_spo2": 94.3,
+      "std_spo2": 0.32,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "e11971eb",
+    "baby": {
+      "baby_id": "4a5f216a",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 3545,
+      "days_since_birth": 89,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.6,
+      "spo2_variability": 0.92
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 96.6,
+      "min_spo2": 46.3,
+      "std_spo2": 0.96,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "ec80b20e",
+    "baby": {
+      "baby_id": "91f26e97",
+      "gestational_age_weeks": 32,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1829,
+      "days_since_birth": 20,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.9,
+      "spo2_variability": 0.82
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 95.9,
+      "min_spo2": 93.4,
+      "std_spo2": 0.43,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "a5f6d692",
+    "baby": {
+      "baby_id": "91f26e97",
+      "gestational_age_weeks": 32,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1829,
+      "days_since_birth": 20,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.9,
+      "spo2_variability": 0.82
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.75,
+    "stats": {
+      "mean_spo2": 95.9,
+      "min_spo2": 90.6,
+      "std_spo2": 0.43,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "e4c27324",
+    "baby": {
+      "baby_id": "91f26e97",
+      "gestational_age_weeks": 32,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 1829,
+      "days_since_birth": 20,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 95.9,
+      "spo2_variability": 0.82
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 95.9,
+      "min_spo2": 55.3,
+      "std_spo2": 0.85,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "18e8ec16",
+    "baby": {
+      "baby_id": "c6049daa",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 688,
+      "days_since_birth": 89,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.8,
+      "spo2_variability": 2.1
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.8,
+      "min_spo2": 88.9,
+      "std_spo2": 0.47,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "450e0d7e",
+    "baby": {
+      "baby_id": "c6049daa",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 688,
+      "days_since_birth": 89,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.8,
+      "spo2_variability": 2.1
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.8,
+      "min_spo2": 88.9,
+      "std_spo2": 0.44,
+      "n_events": 10
+    }
+  },
+  {
+    "night_id": "cc314234",
+    "baby": {
+      "baby_id": "c6049daa",
+      "gestational_age_weeks": 27,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 688,
+      "days_since_birth": 89,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.8,
+      "spo2_variability": 2.1
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.8,
+      "min_spo2": 89.0,
+      "std_spo2": 0.47,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "36d2904a",
+    "baby": {
+      "baby_id": "1b49ac9d",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 973,
+      "days_since_birth": 49,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.7,
+      "spo2_variability": 2.33
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 90.6,
+      "min_spo2": 72.5,
+      "std_spo2": 1.05,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "47f68c3d",
+    "baby": {
+      "baby_id": "1b49ac9d",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 973,
+      "days_since_birth": 49,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.7,
+      "spo2_variability": 2.33
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 90.7,
+      "min_spo2": 88.9,
+      "std_spo2": 0.44,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "7d6f4f7f",
+    "baby": {
+      "baby_id": "1b49ac9d",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 973,
+      "days_since_birth": 49,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 90.7,
+      "spo2_variability": 2.33
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 90.6,
+      "min_spo2": 72.0,
+      "std_spo2": 1.47,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "f754d61e",
+    "baby": {
+      "baby_id": "7ed5f200",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 730,
+      "days_since_birth": 46,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.1,
+      "spo2_variability": 2.02
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 93.1,
+      "min_spo2": 91.2,
+      "std_spo2": 0.38,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "e6503636",
+    "baby": {
+      "baby_id": "7ed5f200",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 730,
+      "days_since_birth": 46,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.1,
+      "spo2_variability": 2.02
+    },
+    "night_number": 2,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 92.9,
+      "min_spo2": 70.1,
+      "std_spo2": 1.9,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "b9bc60ab",
+    "baby": {
+      "baby_id": "7ed5f200",
+      "gestational_age_weeks": 25,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 730,
+      "days_since_birth": 46,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.1,
+      "spo2_variability": 2.02
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.95,
+    "stats": {
+      "mean_spo2": 93.1,
+      "min_spo2": 47.9,
+      "std_spo2": 0.96,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "c588cdd7",
+    "baby": {
+      "baby_id": "ae2d6573",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1243,
+      "days_since_birth": 56,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.3,
+      "spo2_variability": 1.25
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.995,
+    "stats": {
+      "mean_spo2": 93.3,
+      "min_spo2": 92.1,
+      "std_spo2": 0.35,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "181d72e8",
+    "baby": {
+      "baby_id": "ae2d6573",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1243,
+      "days_since_birth": 56,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.3,
+      "spo2_variability": 1.25
+    },
+    "night_number": 2,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 93.1,
+      "min_spo2": 67.9,
+      "std_spo2": 1.86,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "de773923",
+    "baby": {
+      "baby_id": "ae2d6573",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1243,
+      "days_since_birth": 56,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.3,
+      "spo2_variability": 1.25
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 93.3,
+      "min_spo2": 79.3,
+      "std_spo2": 0.63,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "77bf732d",
+    "baby": {
+      "baby_id": "cbf1e9ba",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1759,
+      "days_since_birth": 53,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 92.7,
+      "spo2_variability": 2.08
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.998,
+    "stats": {
+      "mean_spo2": 92.7,
+      "min_spo2": 90.5,
+      "std_spo2": 0.43,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "8b759747",
+    "baby": {
+      "baby_id": "cbf1e9ba",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1759,
+      "days_since_birth": 53,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 92.7,
+      "spo2_variability": 2.08
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 92.7,
+      "min_spo2": 45.4,
+      "std_spo2": 0.83,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "56689d9d",
+    "baby": {
+      "baby_id": "cbf1e9ba",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1759,
+      "days_since_birth": 53,
+      "known_conditions": [
+        "bpd"
+      ],
+      "spo2_baseline": 92.7,
+      "spo2_variability": 2.08
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 92.7,
+      "min_spo2": 90.2,
+      "std_spo2": 0.29,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "dc2696c3",
+    "baby": {
+      "baby_id": "170486eb",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1457,
+      "days_since_birth": 32,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.2,
+      "spo2_variability": 1.69
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 93.1,
+      "min_spo2": 74.5,
+      "std_spo2": 1.03,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "9fbe4703",
+    "baby": {
+      "baby_id": "170486eb",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1457,
+      "days_since_birth": 32,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.2,
+      "spo2_variability": 1.69
+    },
+    "night_number": 2,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 93.0,
+      "min_spo2": 73.1,
+      "std_spo2": 1.38,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "c6b27254",
+    "baby": {
+      "baby_id": "170486eb",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1457,
+      "days_since_birth": 32,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.2,
+      "spo2_variability": 1.69
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.995,
+    "stats": {
+      "mean_spo2": 93.2,
+      "min_spo2": 90.0,
+      "std_spo2": 0.41,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "adde7535",
+    "baby": {
+      "baby_id": "900bf94a",
+      "gestational_age_weeks": 39,
+      "ga_category": "term",
+      "birth_weight_grams": 3185,
+      "days_since_birth": 50,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.9,
+      "spo2_variability": 0.8
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.9,
+      "min_spo2": 95.5,
+      "std_spo2": 0.43,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "5fbf8121",
+    "baby": {
+      "baby_id": "900bf94a",
+      "gestational_age_weeks": 39,
+      "ga_category": "term",
+      "birth_weight_grams": 3185,
+      "days_since_birth": 50,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.9,
+      "spo2_variability": 0.8
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.9,
+      "min_spo2": 95.2,
+      "std_spo2": 0.45,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "74c1427b",
+    "baby": {
+      "baby_id": "900bf94a",
+      "gestational_age_weeks": 39,
+      "ga_category": "term",
+      "birth_weight_grams": 3185,
+      "days_since_birth": 50,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.9,
+      "spo2_variability": 0.8
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.9,
+      "min_spo2": 95.4,
+      "std_spo2": 0.33,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "a9773efc",
+    "baby": {
+      "baby_id": "c3b05ac0",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1410,
+      "days_since_birth": 73,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.9,
+      "spo2_variability": 1.45
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 92.7,
+      "min_spo2": 58.8,
+      "std_spo2": 2.17,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "68af6d9b",
+    "baby": {
+      "baby_id": "c3b05ac0",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1410,
+      "days_since_birth": 73,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.9,
+      "spo2_variability": 1.45
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.993,
+    "stats": {
+      "mean_spo2": 92.9,
+      "min_spo2": 91.6,
+      "std_spo2": 0.35,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "39f1fb72",
+    "baby": {
+      "baby_id": "c3b05ac0",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1410,
+      "days_since_birth": 73,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.9,
+      "spo2_variability": 1.45
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.998,
+    "stats": {
+      "mean_spo2": 92.9,
+      "min_spo2": 90.0,
+      "std_spo2": 0.43,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "fbdfdd09",
+    "baby": {
+      "baby_id": "28dc904d",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 2991,
+      "days_since_birth": 29,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 1.0
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 70.6,
+      "std_spo2": 0.43,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "6599c6b4",
+    "baby": {
+      "baby_id": "28dc904d",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 2991,
+      "days_since_birth": 29,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 1.0
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.9,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 49.1,
+      "std_spo2": 0.77,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "22af015d",
+    "baby": {
+      "baby_id": "28dc904d",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 2991,
+      "days_since_birth": 29,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.1,
+      "spo2_variability": 1.0
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 97.1,
+      "min_spo2": 51.8,
+      "std_spo2": 0.85,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "0a5664a1",
+    "baby": {
+      "baby_id": "db8cd262",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 2611,
+      "days_since_birth": 7,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.5,
+      "spo2_variability": 0.71
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 98.5,
+      "min_spo2": 49.8,
+      "std_spo2": 0.93,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "091b4bf5",
+    "baby": {
+      "baby_id": "db8cd262",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 2611,
+      "days_since_birth": 7,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.5,
+      "spo2_variability": 0.71
+    },
+    "night_number": 2,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.3,
+      "min_spo2": 52.6,
+      "std_spo2": 2.22,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "e1cc33ff",
+    "baby": {
+      "baby_id": "db8cd262",
+      "gestational_age_weeks": 41,
+      "ga_category": "term",
+      "birth_weight_grams": 2611,
+      "days_since_birth": 7,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 98.5,
+      "spo2_variability": 0.71
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 98.5,
+      "min_spo2": 97.1,
+      "std_spo2": 0.46,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "664767a3",
+    "baby": {
+      "baby_id": "a096b717",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1053,
+      "days_since_birth": 67,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 91.5,
+      "spo2_variability": 1.91
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 91.5,
+      "min_spo2": 89.8,
+      "std_spo2": 0.4,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "9425d09a",
+    "baby": {
+      "baby_id": "a096b717",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1053,
+      "days_since_birth": 67,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 91.5,
+      "spo2_variability": 1.91
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.95,
+    "stats": {
+      "mean_spo2": 91.5,
+      "min_spo2": 42.1,
+      "std_spo2": 1.09,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "7501ea54",
+    "baby": {
+      "baby_id": "a096b717",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1053,
+      "days_since_birth": 67,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 91.5,
+      "spo2_variability": 1.91
+    },
+    "night_number": 3,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 91.4,
+      "min_spo2": 75.6,
+      "std_spo2": 1.26,
+      "n_events": 6
+    }
+  },
+  {
+    "night_id": "6daac20c",
+    "baby": {
+      "baby_id": "ee6629c0",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 800,
+      "days_since_birth": 61,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 93.4,
+      "spo2_variability": 2.13
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.8,
+    "stats": {
+      "mean_spo2": 93.4,
+      "min_spo2": 51.1,
+      "std_spo2": 0.7,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "13fd77f8",
+    "baby": {
+      "baby_id": "ee6629c0",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 800,
+      "days_since_birth": 61,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 93.4,
+      "spo2_variability": 2.13
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.95,
+    "stats": {
+      "mean_spo2": 93.4,
+      "min_spo2": 48.4,
+      "std_spo2": 0.87,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "ec175f2d",
+    "baby": {
+      "baby_id": "ee6629c0",
+      "gestational_age_weeks": 24,
+      "ga_category": "extremely_preterm",
+      "birth_weight_grams": 800,
+      "days_since_birth": 61,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 93.4,
+      "spo2_variability": 2.13
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 93.4,
+      "min_spo2": 90.0,
+      "std_spo2": 0.46,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "89567671",
+    "baby": {
+      "baby_id": "8e49116b",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1616,
+      "days_since_birth": 62,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.1,
+      "spo2_variability": 1.47
+    },
+    "night_number": 1,
+    "ground_truth_label": "emergency",
+    "final_label": "emergency",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 93.0,
+      "min_spo2": 78.7,
+      "std_spo2": 1.07,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "c8b3a78e",
+    "baby": {
+      "baby_id": "8e49116b",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1616,
+      "days_since_birth": 62,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.1,
+      "spo2_variability": 1.47
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 93.1,
+      "min_spo2": 90.0,
+      "std_spo2": 0.33,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "f79dee64",
+    "baby": {
+      "baby_id": "8e49116b",
+      "gestational_age_weeks": 28,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1616,
+      "days_since_birth": 62,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.1,
+      "spo2_variability": 1.47
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 93.1,
+      "min_spo2": 90.7,
+      "std_spo2": 0.29,
+      "n_events": 10
+    }
+  },
+  {
+    "night_id": "5812a39e",
+    "baby": {
+      "baby_id": "cb0ac85a",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1420,
+      "days_since_birth": 43,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 94.6,
+      "spo2_variability": 1.21
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.975,
+    "stats": {
+      "mean_spo2": 94.6,
+      "min_spo2": 90.6,
+      "std_spo2": 0.4,
+      "n_events": 9
+    }
+  },
+  {
+    "night_id": "6913d993",
+    "baby": {
+      "baby_id": "cb0ac85a",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1420,
+      "days_since_birth": 43,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 94.6,
+      "spo2_variability": 1.21
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "expert_review",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 94.6,
+      "min_spo2": 93.2,
+      "std_spo2": 0.42,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "edff241d",
+    "baby": {
+      "baby_id": "cb0ac85a",
+      "gestational_age_weeks": 31,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1420,
+      "days_since_birth": 43,
+      "known_conditions": [
+        "apnea_of_prematurity"
+      ],
+      "spo2_baseline": 94.6,
+      "spo2_variability": 1.21
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "expert_review",
+    "confidence": 0.87,
+    "stats": {
+      "mean_spo2": 94.6,
+      "min_spo2": 93.2,
+      "std_spo2": 0.37,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "802298ef",
+    "baby": {
+      "baby_id": "93a987e9",
+      "gestational_age_weeks": 37,
+      "ga_category": "term",
+      "birth_weight_grams": 4103,
+      "days_since_birth": 90,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.8,
+      "spo2_variability": 1.22
+    },
+    "night_number": 1,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 97.8,
+      "min_spo2": 96.2,
+      "std_spo2": 0.39,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "17c3f150",
+    "baby": {
+      "baby_id": "93a987e9",
+      "gestational_age_weeks": 37,
+      "ga_category": "term",
+      "birth_weight_grams": 4103,
+      "days_since_birth": 90,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.8,
+      "spo2_variability": 1.22
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.95,
+    "stats": {
+      "mean_spo2": 97.8,
+      "min_spo2": 49.5,
+      "std_spo2": 1.11,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "8e120b34",
+    "baby": {
+      "baby_id": "93a987e9",
+      "gestational_age_weeks": 37,
+      "ga_category": "term",
+      "birth_weight_grams": 4103,
+      "days_since_birth": 90,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 97.8,
+      "spo2_variability": 1.22
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 97.8,
+      "min_spo2": 50.2,
+      "std_spo2": 0.96,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "d9923141",
+    "baby": {
+      "baby_id": "3909d919",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1064,
+      "days_since_birth": 76,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.6,
+      "spo2_variability": 1.22
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 92.6,
+      "min_spo2": 90.8,
+      "std_spo2": 0.34,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "2f7c5eb5",
+    "baby": {
+      "baby_id": "3909d919",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1064,
+      "days_since_birth": 76,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.6,
+      "spo2_variability": 1.22
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 92.6,
+      "min_spo2": 44.3,
+      "std_spo2": 0.94,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "d140669d",
+    "baby": {
+      "baby_id": "3909d919",
+      "gestational_age_weeks": 29,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1064,
+      "days_since_birth": 76,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 92.6,
+      "spo2_variability": 1.22
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 1.0,
+    "stats": {
+      "mean_spo2": 92.6,
+      "min_spo2": 90.0,
+      "std_spo2": 0.42,
+      "n_events": 8
+    }
+  },
+  {
+    "night_id": "4557ea64",
+    "baby": {
+      "baby_id": "1f21b93a",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 4381,
+      "days_since_birth": 5,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.4,
+      "spo2_variability": 0.99
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.95,
+    "stats": {
+      "mean_spo2": 96.4,
+      "min_spo2": 46.3,
+      "std_spo2": 0.99,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "9caabf47",
+    "baby": {
+      "baby_id": "1f21b93a",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 4381,
+      "days_since_birth": 5,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.4,
+      "spo2_variability": 0.99
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.4,
+      "min_spo2": 94.4,
+      "std_spo2": 0.43,
+      "n_events": 1
+    }
+  },
+  {
+    "night_id": "169841f5",
+    "baby": {
+      "baby_id": "1f21b93a",
+      "gestational_age_weeks": 40,
+      "ga_category": "term",
+      "birth_weight_grams": 4381,
+      "days_since_birth": 5,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 96.4,
+      "spo2_variability": 0.99
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "normal",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 96.4,
+      "min_spo2": 93.5,
+      "std_spo2": 0.46,
+      "n_events": 2
+    }
+  },
+  {
+    "night_id": "f2e6a974",
+    "baby": {
+      "baby_id": "4e05ee75",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2210,
+      "days_since_birth": 66,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.3,
+      "spo2_variability": 0.75
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.884,
+    "stats": {
+      "mean_spo2": 93.3,
+      "min_spo2": 90.4,
+      "std_spo2": 0.34,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "ee3f98f2",
+    "baby": {
+      "baby_id": "4e05ee75",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2210,
+      "days_since_birth": 66,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.3,
+      "spo2_variability": 0.75
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.774,
+    "stats": {
+      "mean_spo2": 93.3,
+      "min_spo2": 91.8,
+      "std_spo2": 0.45,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "77188191",
+    "baby": {
+      "baby_id": "4e05ee75",
+      "gestational_age_weeks": 36,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2210,
+      "days_since_birth": 66,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.3,
+      "spo2_variability": 0.75
+    },
+    "night_number": 3,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 93.3,
+      "min_spo2": 52.8,
+      "std_spo2": 0.75,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "1bc3782a",
+    "baby": {
+      "baby_id": "426e77b7",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2189,
+      "days_since_birth": 59,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.8,
+      "spo2_variability": 1.06
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier1_rules",
+    "confidence": 0.7,
+    "stats": {
+      "mean_spo2": 94.8,
+      "min_spo2": 90.4,
+      "std_spo2": 0.5,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "a56efdb7",
+    "baby": {
+      "baby_id": "426e77b7",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2189,
+      "days_since_birth": 59,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.8,
+      "spo2_variability": 1.06
+    },
+    "night_number": 2,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.85,
+    "stats": {
+      "mean_spo2": 94.8,
+      "min_spo2": 61.3,
+      "std_spo2": 0.65,
+      "n_events": 5
+    }
+  },
+  {
+    "night_id": "30c88b85",
+    "baby": {
+      "baby_id": "426e77b7",
+      "gestational_age_weeks": 34,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2189,
+      "days_since_birth": 59,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.8,
+      "spo2_variability": 1.06
+    },
+    "night_number": 3,
+    "ground_truth_label": "urgent",
+    "final_label": "urgent",
+    "source": "tier1_rules",
+    "confidence": 0.99,
+    "stats": {
+      "mean_spo2": 94.7,
+      "min_spo2": 80.6,
+      "std_spo2": 1.33,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "9a458875",
+    "baby": {
+      "baby_id": "9726285d",
+      "gestational_age_weeks": 30,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1431,
+      "days_since_birth": 80,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.3,
+      "spo2_variability": 2.11
+    },
+    "night_number": 1,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 93.3,
+      "min_spo2": 90.4,
+      "std_spo2": 0.39,
+      "n_events": 7
+    }
+  },
+  {
+    "night_id": "e790d562",
+    "baby": {
+      "baby_id": "9726285d",
+      "gestational_age_weeks": 30,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1431,
+      "days_since_birth": 80,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.3,
+      "spo2_variability": 2.11
+    },
+    "night_number": 2,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.996,
+    "stats": {
+      "mean_spo2": 93.3,
+      "min_spo2": 92.0,
+      "std_spo2": 0.43,
+      "n_events": 0
+    }
+  },
+  {
+    "night_id": "e3ca9a9d",
+    "baby": {
+      "baby_id": "9726285d",
+      "gestational_age_weeks": 30,
+      "ga_category": "very_preterm",
+      "birth_weight_grams": 1431,
+      "days_since_birth": 80,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 93.3,
+      "spo2_variability": 2.11
+    },
+    "night_number": 3,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.999,
+    "stats": {
+      "mean_spo2": 93.3,
+      "min_spo2": 90.6,
+      "std_spo2": 0.5,
+      "n_events": 10
+    }
+  },
+  {
+    "night_id": "60f4e44f",
+    "baby": {
+      "baby_id": "a1f68a91",
+      "gestational_age_weeks": 33,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2101,
+      "days_since_birth": 82,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.0,
+      "spo2_variability": 0.63
+    },
+    "night_number": 1,
+    "ground_truth_label": "artifact",
+    "final_label": "artifact",
+    "source": "tier1_rules",
+    "confidence": 0.8,
+    "stats": {
+      "mean_spo2": 94.0,
+      "min_spo2": 50.3,
+      "std_spo2": 0.59,
+      "n_events": 4
+    }
+  },
+  {
+    "night_id": "142192d5",
+    "baby": {
+      "baby_id": "a1f68a91",
+      "gestational_age_weeks": 33,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2101,
+      "days_since_birth": 82,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.0,
+      "spo2_variability": 0.63
+    },
+    "night_number": 2,
+    "ground_truth_label": "borderline",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.989,
+    "stats": {
+      "mean_spo2": 94.0,
+      "min_spo2": 90.7,
+      "std_spo2": 0.41,
+      "n_events": 3
+    }
+  },
+  {
+    "night_id": "73d01a91",
+    "baby": {
+      "baby_id": "a1f68a91",
+      "gestational_age_weeks": 33,
+      "ga_category": "moderate_preterm",
+      "birth_weight_grams": 2101,
+      "days_since_birth": 82,
+      "known_conditions": [
+        "none"
+      ],
+      "spo2_baseline": 94.0,
+      "spo2_variability": 0.63
+    },
+    "night_number": 3,
+    "ground_truth_label": "normal",
+    "final_label": "borderline",
+    "source": "tier2_classifier",
+    "confidence": 0.932,
+    "stats": {
+      "mean_spo2": 94.0,
+      "min_spo2": 92.6,
+      "std_spo2": 0.42,
+      "n_events": 0
+    }
+  }
+]
